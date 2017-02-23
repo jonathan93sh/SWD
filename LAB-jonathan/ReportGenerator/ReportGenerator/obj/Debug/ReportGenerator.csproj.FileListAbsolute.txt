@@ -1,0 +1,6 @@
+C:\git\SWD\LAB\ReportGenerator\ReportGenerator\bin\Debug\ReportGenerator.exe.config
+C:\git\SWD\LAB\ReportGenerator\ReportGenerator\bin\Debug\ReportGenerator.exe
+C:\git\SWD\LAB\ReportGenerator\ReportGenerator\bin\Debug\ReportGenerator.pdb
+C:\git\SWD\LAB\ReportGenerator\ReportGenerator\obj\Debug\ReportGenerator.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB\ReportGenerator\ReportGenerator\obj\Debug\ReportGenerator.exe
+C:\git\SWD\LAB\ReportGenerator\ReportGenerator\obj\Debug\ReportGenerator.pdb

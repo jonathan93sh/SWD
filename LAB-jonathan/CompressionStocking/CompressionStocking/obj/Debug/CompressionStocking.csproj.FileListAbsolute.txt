@@ -1,0 +1,5 @@
+C:\git\SWD\LAB\CompressionStocking\CompressionStocking\bin\Debug\CompressionStocking.dll
+C:\git\SWD\LAB\CompressionStocking\CompressionStocking\bin\Debug\CompressionStocking.pdb
+C:\git\SWD\LAB\CompressionStocking\CompressionStocking\obj\Debug\CompressionStocking.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB\CompressionStocking\CompressionStocking\obj\Debug\CompressionStocking.dll
+C:\git\SWD\LAB\CompressionStocking\CompressionStocking\obj\Debug\CompressionStocking.pdb
