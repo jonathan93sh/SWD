@@ -9,7 +9,7 @@ using System.Threading;
 namespace StockService
 {
 
-    /**
+    /**GROUP 19
      * Stock klassen er en simpel klasse der nedarver subject, sådan så det kan overvåges.
      * klassen er sat til at sende nofikationer hver gang, at dens værdi ændrer sig.
      **/

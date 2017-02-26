@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/**
+/** GROUP 19
  * Vi har lavet vores egen Observer, ikke fordi den der allerede eksistere ikke var god nok, men mere fordi vi var i tvivl om vi måtte bruge den eller om vi selv skulle lave en.
  * Der er lavet en generisk Push Observer klasse, og en subject klasse, som også er generisk.
  * Observer klassen bruges til at overvåge et/flere subject, og få nofikationer når der sker en ændring. Eftersom det er en push Observer vil det betyde at Observeren vil modtage data fra det subject der sender en nofikation.

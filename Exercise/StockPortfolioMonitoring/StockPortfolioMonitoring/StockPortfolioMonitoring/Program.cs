@@ -8,7 +8,7 @@ using StockService;
 
 namespace StockPortfolioMonitoring
 {
-    /**
+    /** GROUP 19
      * Denne klasse bruges til at give lidt liv til de forskellige stocks.
      * 
      **/
