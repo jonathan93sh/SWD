@@ -45,8 +45,8 @@ namespace StockPortfolioMonitoring
     class Program
     {
         /**
-         * Et lille test program hvor der bliver oprettet en lille liste af stocks, herefter to portfolio'er og et enkelt display.
-         * Det skal være muligt at skifte mellem de to portfolio'er med tasterne '1' og '2'. Alt skulle være live update.
+         * Et lille test program, hvor der bliver oprettet en lille liste af stocks, herefter to portfolier og et enkelt display.
+         * Det skal være muligt at skifte mellem de to portfolier med tasterne '1' og '2'. Alt er live updated.
          **/
         static void Main(string[] args)
         {

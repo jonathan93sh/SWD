@@ -10,8 +10,8 @@ namespace StockService
 {
 
     /**
-     * Stock klassen er en simpel klasse der nedarver subject så det kan overvåges.
-     * klassen er sat til at sende nofikationer hver gang dens værdi ændre sig.
+     * Stock klassen er en simpel klasse der nedarver subject, sådan så det kan overvåges.
+     * klassen er sat til at sende nofikationer hver gang, at dens værdi ændrer sig.
      **/
     class Stock : subject_HM<Stock>
     {
@@ -43,7 +43,7 @@ namespace StockService
     /**
      * Portfolio klassen indeholder en liste over hvilke stocks der bliver fulgt. Klassen er både et subject og en observer af stock.
      * Grunden til at den er et subject, er fordi PortfolioDisplay skal vide hvornår der er sket en ændring i det gældende portfolio.
-     * Den er selvfølgelig er den en observer af stock, efter som den er interesseret i at vide hvornår der sker ændringer i de stocks som der bliver fulgt.
+     * Den er selvfølgelig en observer af stock, efter som den er interesseret i at vide hvornår der sker ændringer i de stocks, som der bliver fulgt.
      **/
     class Portfolio : subject_HM<Portfolio>, IObserver_HM<Stock>
     {
@@ -96,7 +96,7 @@ namespace StockService
 
 
     /**
-     * PortfolioDisplay bruges til at opdatere displayet hver gang der sker en ændring i en kurs i den gældende portfolio.
+     * PortfolioDisplay bruges til at opdatere displayet hver gang der sker en ændring i en kurs i det gældende portfolio.
      * Displayet er lavet til kun at vise et Portfolio ad gangen.
      **/
     class PortfolioDisplay : IObserver_HM<Portfolio>
