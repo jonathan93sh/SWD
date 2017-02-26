@@ -8,6 +8,10 @@ using StockService;
 
 namespace StockPortfolioMonitoring
 {
+    /**
+     * Denne klasse bruges til at give lidt liv til de forskellige stocks.
+     * 
+     **/
     class LifeOfStock
     {
         private Stock stock_;
@@ -26,7 +30,6 @@ namespace StockPortfolioMonitoring
         public void run()
         {
             
-
             while(true)
             {
                 System.Threading.Thread.Sleep(r.Next(1000,10000));
@@ -41,15 +44,17 @@ namespace StockPortfolioMonitoring
 
     class Program
     {
+        /**
+         * Et lille test program hvor der bliver oprettet en lille liste af stocks, herefter to portfolio'er og et enkelt display.
+         * Det skal være muligt at skifte mellem de to portfolio'er med tasterne '1' og '2'. Alt skulle være live update.
+         **/
         static void Main(string[] args)
         {
             Random seed = new Random();
             List<Stock> stocks = new List<Stock>();
 
-
-
             stocks.Add(new Stock("Google", 10.5f));
-            stocks.Add(new Stock("sony", 50.2f));
+            stocks.Add(new Stock("Sony", 50.2f));
             stocks.Add(new Stock("IBM", 20.2f));
             stocks.Add(new Stock("Facebook", 2320.2f));
             stocks.Add(new Stock("Ebay", 420.2f));
@@ -88,9 +93,7 @@ namespace StockPortfolioMonitoring
 
             PortfolioDisplay display = new PortfolioDisplay("press 1 to see big portfolio, press 2 to see small portfolio");
 
-            big.display = display;
-
-            big.displayUpdate();
+            display.CurrentPortfolio = big;
 
             ConsoleKeyInfo consoleKeyInfo;
             while (true)
@@ -98,15 +101,11 @@ namespace StockPortfolioMonitoring
                 consoleKeyInfo = Console.ReadKey(true);
                 if (consoleKeyInfo.Key == ConsoleKey.D2)
                 {
-                    big.display = null;
-                    small.display = display;
-                    small.displayUpdate();
+                    display.CurrentPortfolio = small;
                 }
                 if (consoleKeyInfo.Key == ConsoleKey.D1)
                 {
-                    small.display = null;
-                    big.display = display;
-                    big.displayUpdate();
+                    display.CurrentPortfolio = big;
                 }
             }
 

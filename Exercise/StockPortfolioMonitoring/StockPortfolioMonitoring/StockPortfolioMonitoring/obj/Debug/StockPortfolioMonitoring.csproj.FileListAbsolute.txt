@@ -5,3 +5,9 @@ C:\git\SWD\LAB\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioM
 C:\git\SWD\LAB\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\bin\Debug\StockPortfolioMonitoring.pdb
 C:\git\SWD\LAB\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\obj\Debug\StockPortfolioMonitoring.exe
 C:\git\SWD\LAB\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\obj\Debug\StockPortfolioMonitoring.pdb
+C:\git\SWD\Exercise\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\bin\Debug\StockPortfolioMonitoring.exe.config
+C:\git\SWD\Exercise\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\obj\Debug\StockPortfolioMonitoring.exe
+C:\git\SWD\Exercise\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\obj\Debug\StockPortfolioMonitoring.pdb
+C:\git\SWD\Exercise\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\obj\Debug\StockPortfolioMonitoring.csprojResolveAssemblyReference.cache
+C:\git\SWD\Exercise\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\bin\Debug\StockPortfolioMonitoring.exe
+C:\git\SWD\Exercise\StockPortfolioMonitoring\StockPortfolioMonitoring\StockPortfolioMonitoring\bin\Debug\StockPortfolioMonitoring.pdb
