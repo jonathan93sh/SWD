@@ -1,0 +1,33 @@
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\bin\Debug\IceCreamMonitorMVP.exe.config
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\bin\Debug\IceCreamMonitorMVP.exe
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\bin\Debug\IceCreamMonitorMVP.pdb
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.csprojResolveAssemblyReference.cache
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\App.g.cs
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP_MarkupCompile.cache
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.g.resources
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.Properties.Resources.resources
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.csproj.GenerateResource.Cache
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.exe
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.pdb
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\MainWiew.baml
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\obj\Debug\MainWiew.g.cs
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP\IceCreamMonitorMVP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\bin\Debug\IceCreamMonitorMVP.exe.config
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.exe
+C:\Users\PoulEjnar\Documents\Courses\I4SWD\Lektioner\13 Design Patterns - MVC + MVP\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.pdb
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\MainWiew.baml
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\MainWiew.g.cs
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\App.g.cs
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP_MarkupCompile.cache
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.g.resources
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.Properties.Resources.resources
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.csproj.GenerateResource.Cache
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.exe
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\bin\Debug\IceCreamMonitorMVP.exe.config
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\bin\Debug\IceCreamMonitorMVP.exe
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\bin\Debug\IceCreamMonitorMVP.pdb
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\bin\Debug\Newtonsoft.Json.dll
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\bin\Debug\Newtonsoft.Json.xml
+C:\git\SWD\LAB-jonathan\IceCreamMonitorMVP-lab\IceCreamMonitorMVP\obj\Debug\IceCreamMonitorMVP.pdb
