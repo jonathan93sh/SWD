@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 
-namespace DenSorteBog.Services
+namespace DenSorteBog
 {
     public interface ISorteBogServiceAgent
     {
-        SorteBogModel createSorteBog();
+        SorteBogModel CreateSorteBog();
     }
 }

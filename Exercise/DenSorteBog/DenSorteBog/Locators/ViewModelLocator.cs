@@ -60,9 +60,13 @@ namespace DenSorteBog
             }
         }
 
-        //public SorteBogViewModel SorteBogViewModel
-        //{
-
-        //}
+        public SorteBogViewModel SorteBogViewModel
+        {
+            get
+            {
+                ISorteBogServiceAgent serviceAgent = new MockSorteBogServiceAgent();
+                return new SorteBogViewModel(serviceAgent);
+            }
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 
 using SimpleMvvmToolkit;
 
-namespace DenSorteBog.Models
+namespace DenSorteBog
 {
     public class SorteBogModel : ModelBase<SorteBogModel>
     {

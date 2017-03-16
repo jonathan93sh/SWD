@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DenSorteBog.Services
+namespace DenSorteBog
 {
     public class MockSorteBogServiceAgent : ISorteBogServiceAgent
     {

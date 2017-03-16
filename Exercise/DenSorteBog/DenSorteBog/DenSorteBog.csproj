@@ -52,7 +52,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleMvvmToolkit.5.5.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -64,9 +66,11 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -74,6 +78,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\SorteBogModel.cs" />
+    <Compile Include="Services\ISorteBogServiceAgent.cs" />
+    <Compile Include="Services\MockSorteBogServiceAgent.cs" />
     <Compile Include="ViewModels\SorteBogViewModel.cs" />
     <Compile Include="Views\CustomerView.xaml.cs">
       <DependentUpon>CustomerView.xaml</DependentUpon>
@@ -83,8 +89,11 @@
     <Compile Include="Services\ICustomerServiceAgent.cs" />
     <Compile Include="Services\MockCustomerServiceAgent.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
-    <Compile Include="Views\SorteBogView.xaml.cs">
-      <DependentUpon>SorteBogView.xaml</DependentUpon>
+    <Compile Include="Views\Gealdsposter.xaml.cs">
+      <DependentUpon>Gealdsposter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\KredSkyldView.xaml.cs">
+      <DependentUpon>KredSkyldView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\CustomerView.xaml">
       <SubType>Designer</SubType>
@@ -102,7 +111,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\SorteBogView.xaml">
+    <Page Include="Views\Gealdsposter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KredSkyldView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

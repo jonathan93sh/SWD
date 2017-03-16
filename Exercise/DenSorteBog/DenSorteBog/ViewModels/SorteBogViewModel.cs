@@ -21,13 +21,13 @@ namespace DenSorteBog
     public class SorteBogViewModel : ViewModelDetailBase<SorteBogViewModel, SorteBogModel>
     {
         // TODO: Add a member for IXxxServiceAgent
-        private /* IXxxServiceAgent */ serviceAgent;
+        private ISorteBogServiceAgent serviceAgent;
 
         // Default ctor
         public SorteBogViewModel() { }
 
         // TODO: ctor that accepts IXxxServiceAgent
-        public SorteBogViewModel(/* IXxxServiceAgent */ serviceAgent)
+        public SorteBogViewModel(ISorteBogServiceAgent serviceAgent)
         {
             this.serviceAgent = serviceAgent;
         }

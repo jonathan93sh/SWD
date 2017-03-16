@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DenSorteBog.Views
 {
     /// <summary>
-    /// Interaction logic for SorteBogView.xaml
+    /// Interaction logic for KredSkyldView.xaml
     /// </summary>
-    public partial class SorteBogView : UserControl
+    public partial class KredSkyldView : UserControl
     {
-        public SorteBogView()
+        public KredSkyldView()
         {
             InitializeComponent();
         }

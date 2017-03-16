@@ -37,7 +37,7 @@ namespace DenSorteBog.Views {
     /// <summary>
     /// SorteBogView
     /// </summary>
-    public partial class SorteBogView : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
+    public partial class Gealdsposter : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
         
