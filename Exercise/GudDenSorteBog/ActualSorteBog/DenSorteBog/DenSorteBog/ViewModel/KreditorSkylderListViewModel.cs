@@ -21,6 +21,7 @@ namespace DenSorteBog.ViewModel
     /// </summary>
     public class KreditorSkylderListViewModel : ViewModelDetailBase<KreditorSkylderListViewModel, SorteBogModel>
     {
+        
         // TODO: Add a member for IXxxServiceAgent
         private ServiceAgent.ISorteBogServiceAgent serviceAgent;
 
@@ -29,6 +30,7 @@ namespace DenSorteBog.ViewModel
         // Default ctor
         public KreditorSkylderListViewModel() {
             base.Model = default_;
+            
         }
 
         // TODO: ctor that accepts IXxxServiceAgent
@@ -40,6 +42,7 @@ namespace DenSorteBog.ViewModel
 
         // TODO: Add events to notify the view or obtain data from the view
         public event EventHandler<NotificationEventArgs<Exception>> ErrorNotice;
+
 
         // TODO: Add properties using the mvvmprop code snippet
         private ObservableCollection<SorteBogModel> sorteBog;
@@ -126,7 +129,7 @@ namespace DenSorteBog.ViewModel
 
         public void windowClosed()
         {
-
+            serviceAgent.saveData();
         }
 
         public void testGaelViewModel()

@@ -14,7 +14,7 @@ namespace DenSorteBog.ServiceAgent
         SorteBogModel CreateSorteBog();
         ObservableCollection<SorteBogModel> funcTestSortBog();
 
-
+        void saveData();
 
         //List<SorteBogModel> funcRemoveSelectedPerson();
     }

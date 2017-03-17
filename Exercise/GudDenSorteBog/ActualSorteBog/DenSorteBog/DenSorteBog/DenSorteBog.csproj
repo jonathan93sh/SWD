@@ -81,6 +81,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Repository.cs" />
     <Compile Include="Locators\DenSorteBogViewModelLocator.cs" />
     <Compile Include="Model\MessageTokens.cs" />
     <Compile Include="Model\Person.cs" />
