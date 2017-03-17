@@ -1,9 +1,0 @@
-﻿<Application x:Class="DenSorteBog.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="View/KreditorSkylderListView.xaml">
-    <Application.Resources>
-        <vm:DenSorteBogViewModelLocator xmlns:vm="clr-namespace:DenSorteBog.Locators"
-                                      x:Key="Locator"/>
-    </Application.Resources>
-</Application>
