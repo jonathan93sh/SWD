@@ -1,7 +1,7 @@
 ﻿/*
   In App.xaml:
   <Application.Resources>
-      <vm:DenSorteBogViewModelLocator xmlns:vm="clr-namespace:DenSorteBog.Locators"
+      <vm:DenKreditorSkylderListViewModelLocator xmlns:vm="clr-namespace:DenSorteBog.Locators"
                                    x:Key="Locator" />
   </Application.Resources>
   
@@ -31,7 +31,7 @@ namespace DenSorteBog.Locators
     /// </para>
     /// <code>
     /// &lt;Application.Resources&gt;
-    ///     &lt;vm:DenSorteBogViewModelLocator xmlns:vm="clr-namespace:DenSorteBog.Locators"
+    ///     &lt;vm:DenKreditorSkylderListViewModelLocator xmlns:vm="clr-namespace:DenSorteBog.Locators"
     ///                                  x:Key="Locator" /&gt;
     /// &lt;/Application.Resources&gt;
     /// </code>
@@ -56,7 +56,7 @@ namespace DenSorteBog.Locators
         {
             get
             {
-                IServiceAgent serviceAgent = new ServiceAgentFake();
+                ISorteBogServiceAgent serviceAgent = new MockSorteBogServiceAgent();
                 return new KreditorSkylderListViewModel(serviceAgent);
                 //return new KreditorSkylderListViewModel(new KreditorSkylderListModel());
             }
@@ -67,8 +67,8 @@ namespace DenSorteBog.Locators
         {
             get
             {
-                IServiceAgent serviceAgent = new ServiceAgentFake();
-                return new GaeldsposterViewModel(serviceAgent);
+               // IServiceAgent serviceAgent = new ServiceAgentFake();
+                return new GaeldsposterViewModel();
                 //return new GaeldsposterViewModel(new GaeldsposterModel());
             }
         }

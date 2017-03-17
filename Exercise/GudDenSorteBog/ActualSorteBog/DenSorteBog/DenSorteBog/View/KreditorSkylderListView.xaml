@@ -68,7 +68,17 @@
             Margin="0,102,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="TestFuncButton" />
+            Content="TestFuncButton">
+           <!-- Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll -->
+            <!-- Use mvvmxmlns snippet to add i and ei namespace prefixes -->
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <ei:CallMethodAction 
+                TargetObject="{Binding}"
+                MethodName="funcTestSortBog"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
         <Grid
             Width="919"
             Height="565"
@@ -84,7 +94,8 @@
                 Height="505"
                 Margin="10,50,0,0"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top" />
+                VerticalAlignment="Top" 
+                ItemsSource="{Binding Path=TestSortBog, Mode=TwoWay}"/>
             <DataGrid
                 Grid.Column="1"
                 Width="439"

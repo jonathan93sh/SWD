@@ -1,60 +1,59 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Input;
 using System.Threading;
 using System.Collections.ObjectModel;
 
+using DenSorteBog.Model;
+using DenSorteBog.ServiceAgent;
+using DenSorteBog.Locators;
+using DenSorteBog;
 // Toolkit namespace
 using SimpleMvvmToolkit;
 
-// Toolkit extension methods
-using SimpleMvvmToolkit.ModelExtensions;
-
-namespace DenSorteBog
+namespace DenSorteBog.ViewModel
 {
     /// <summary>
-    /// This class contains properties that a View can data bind to.
+    /// This class extends ViewModelDetailBase which implements IEditableDataObject.
+    /// <para>
+    /// Specify type being edited <strong>DetailType</strong> as the second type argument
+    /// and as a parameter to the seccond ctor.
+    /// </para>
     /// <para>
     /// Use the <strong>mvvmprop</strong> snippet to add bindable properties to this ViewModel.
     /// </para>
     /// </summary>
-    public class SorteBogViewModel : ViewModelDetailBase<SorteBogViewModel, SorteBogModel>
+    public class KreditorSkylderListViewModel2 : ViewModelDetailBase<KreditorSkylderListViewModel2, KreditorSkylderListModel>
     {
         // TODO: Add a member for IXxxServiceAgent
-        private ISorteBogServiceAgent serviceAgent;
+        private IServiceAgent serviceAgent;
 
         // Default ctor
-        public SorteBogViewModel() { }
+        public KreditorSkylderListViewModel2() { }
+
+        // TODO: Ctor to set base.Model to DetailType
+        public KreditorSkylderListViewModel2(KreditorSkylderListModel model)
+        {
+            base.Model = model;
+        }
 
         // TODO: ctor that accepts IXxxServiceAgent
-        public SorteBogViewModel(ISorteBogServiceAgent serviceAgent)
+        public KreditorSkylderListViewModel2(IServiceAgent serviceAgent)
         {
             this.serviceAgent = serviceAgent;
+           
         }
 
         // TODO: Add events to notify the view or obtain data from the view
         public event EventHandler<NotificationEventArgs<Exception>> ErrorNotice;
 
         // TODO: Add properties using the mvvmprop code snippet
-        private ObservableCollection<SorteBogModel> sorteBog;
-        public ObservableCollection<SorteBogModel> TestSortBog
-        {
-            get { return sorteBog; }
-            set
-            {
-                sorteBog = value;
-                NotifyPropertyChanged(vm => vm.TestSortBog);
-            }
-        }
-
-        public void funcTestSortBog()
-        {
-            var products = serviceAgent.funcTestSortBog();
-            TestSortBog = new ObservableCollection<SorteBogModel>(products);
-        }
-
 
         // TODO: Add methods that will be called by the view
+        private GaeldsposterView otherView = new GaeldsposterView();
+        public void visGaeldsposter()
+        {
+            otherView.ShowDialog(); // blok skal i en tråd
+        }
 
         // TODO: Optionally add callback methods for async calls to the service agent
         
