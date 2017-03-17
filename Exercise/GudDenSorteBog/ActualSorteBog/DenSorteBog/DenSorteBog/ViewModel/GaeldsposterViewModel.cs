@@ -4,11 +4,12 @@ using System.Threading;
 using System.Collections.ObjectModel;
 
 using DenSorteBog.Model;
-using DenSorteBog.ServiceAgent;
 
 // Toolkit namespace
 using SimpleMvvmToolkit;
+using SimpleMvvmToolkit.ModelExtensions;
 
+using DenSorteBog.Model;
 
 
 namespace DenSorteBog.ViewModel
@@ -23,25 +24,25 @@ namespace DenSorteBog.ViewModel
     /// Use the <strong>mvvmprop</strong> snippet to add bindable properties to this ViewModel.
     /// </para>
     /// </summary>
-    public class GaeldsposterViewModel : ViewModelBase<GaeldsposterViewModel>
+    public class GaeldsposterViewModel : ViewModelDetailBase<GaeldsposterViewModel, SorteBogModel>
     {
         // TODO: Add a member for IXxxServiceAgent
-        private ServiceAgent.ISorteBogServiceAgent serviceAgent;
+        //private ServiceAgent.ISorteBogServiceAgent serviceAgent;
 
         // Default ctor
         public GaeldsposterViewModel() { }
 
         // TODO: Ctor to set base.Model to DetailType
-        /*public GaeldsposterViewModel(GaeldsposterModel model)
+        public GaeldsposterViewModel(SorteBogModel model)
         {
             base.Model = model;
-        }*/
+        }
 
         // TODO: ctor that accepts IXxxServiceAgent
-        public GaeldsposterViewModel(ServiceAgent.ISorteBogServiceAgent serviceAgent)
+        /*public GaeldsposterViewModel(ServiceAgent.ISorteBogServiceAgent serviceAgent)
         {
             this.serviceAgent = serviceAgent;
-        }
+        }*/
 
         // TODO: Add events to notify the view or obtain data from the view
         public event EventHandler<NotificationEventArgs<Exception>> ErrorNotice;

@@ -15,7 +15,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 using DenSorteBog.Model;
-using DenSorteBog.ServiceAgent;
 using DenSorteBog.ViewModel;
 
 // Toolkit namespace
@@ -50,14 +49,17 @@ namespace DenSorteBog.Locators
     {
         // TODO: Use mvvmlocator or mvvmlocatornosa code snippets
         // to add ViewModels to the locator.
-        ISorteBogServiceAgent serviceAgent = new MockSorteBogServiceAgent();
+        //ISorteBogServiceAgent serviceAgent = new MockSorteBogServiceAgent();
         // Create KreditorSkylderListViewModel on demand
+
+        static SorteBogModel model = new SorteBogModel();
+        
         public KreditorSkylderListViewModel KreditorSkylderListViewModel
         {
             get
             {
-                
-                return new KreditorSkylderListViewModel(serviceAgent);
+
+                return new KreditorSkylderListViewModel(model);
                 //return new KreditorSkylderListViewModel(new KreditorSkylderListModel());
             }
         }
@@ -68,7 +70,7 @@ namespace DenSorteBog.Locators
             get
             {
                // IServiceAgent serviceAgent = new ServiceAgentFake();
-                return new GaeldsposterViewModel(serviceAgent);
+                return new GaeldsposterViewModel(model);
                 //return new GaeldsposterViewModel(new GaeldsposterModel());
             }
         }

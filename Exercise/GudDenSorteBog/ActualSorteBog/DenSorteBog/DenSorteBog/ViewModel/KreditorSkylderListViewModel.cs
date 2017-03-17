@@ -11,6 +11,8 @@ using SimpleMvvmToolkit;
 // Toolkit extension methods
 using SimpleMvvmToolkit.ModelExtensions;
 
+using DenSorteBog.Model;
+
 namespace DenSorteBog.ViewModel
 {
     /// <summary>
@@ -21,81 +23,56 @@ namespace DenSorteBog.ViewModel
     /// </summary>
     public class KreditorSkylderListViewModel : ViewModelDetailBase<KreditorSkylderListViewModel, SorteBogModel>
     {
-        
-        // TODO: Add a member for IXxxServiceAgent
-        private ServiceAgent.ISorteBogServiceAgent serviceAgent;
 
-        SorteBogModel default_ = new SorteBogModel() { MoneyValue = "0", PersonName = "" };
+        
+
+        // TODO: Add a member for IXxxServiceAgent
+        //private ServiceAgent.ISorteBogServiceAgent serviceAgent;
+        private Model.Person default_ = new Model.Person() { money = 0.0, name = "" };
+
+        public Model.Person onPagePerson { get { return default_; } set { default_ = value; NotifyPropertyChanged<Person>(mv => mv.onPagePerson); } }
+
+        public string onPagePersonName { get { return onPagePerson.name; } set { onPagePerson.name = value; NotifyPropertyChanged<String>(mv => mv.onPagePersonName); } }
+
+        public string onPagePersonMoney { get { return onPagePerson.money.ToString() ; } set { onPagePerson.money = double.Parse(value); NotifyPropertyChanged<String>(mv => mv.onPagePersonMoney); } }
+
 
         // Default ctor
         public KreditorSkylderListViewModel() {
-            base.Model = default_;
             
         }
 
+
+        public KreditorSkylderListViewModel(SorteBogModel model)
+        {
+            base.Model = model;
+        }
+
+
         // TODO: ctor that accepts IXxxServiceAgent
-        public KreditorSkylderListViewModel(ServiceAgent.ISorteBogServiceAgent serviceAgent)
+        /*public KreditorSkylderListViewModel(ServiceAgent.ISorteBogServiceAgent serviceAgent)
         {
             base.Model = default_;
             this.serviceAgent = serviceAgent;
-        }
+        }*/
 
         // TODO: Add events to notify the view or obtain data from the view
         public event EventHandler<NotificationEventArgs<Exception>> ErrorNotice;
 
 
         // TODO: Add properties using the mvvmprop code snippet
-        private ObservableCollection<SorteBogModel> sorteBog;
-        public ObservableCollection<SorteBogModel> TestSortBog
-        {
-            get { return sorteBog; }
-            set
-            {
-                sorteBog = value;
-                NotifyPropertyChanged(vm => vm.TestSortBog);
-            }
-        }
 
-
-        private SorteBogModel _SelectedPerson;
-        public SorteBogModel SelectedPerson
+        private Person _SelectedPerson;
+        public Person SelectedPerson
         {
             get { return _SelectedPerson; }
             set
             {
-                base.Model = value;
+                if (value == null)
+                    return;
+
                 _SelectedPerson = value;
                 NotifyPropertyChanged(m => m.SelectedPerson);
-            }
-        }
-
-
-        private bool _KreditorChecked;
-        public bool KreditorChecked
-        {
-            get { return _KreditorChecked; }
-            set
-            {
-                _KreditorChecked = value;
-
-                if (KreditorChecked == SkylderChecked)
-                    SkylderChecked = !KreditorChecked;
-
-                NotifyPropertyChanged(m => m.KreditorChecked);
-            }
-        }
-
-        private bool _SkylderChecked;
-        public bool SkylderChecked
-        {
-            get { return _SkylderChecked; }
-            set
-            {
-                _SkylderChecked = value;
-                if (KreditorChecked == SkylderChecked)
-                    KreditorChecked = !SkylderChecked;
-                
-                NotifyPropertyChanged(m => m.SkylderChecked);
             }
         }
 
@@ -104,32 +81,51 @@ namespace DenSorteBog.ViewModel
 
 
         // TODO: Add methods that will be called by the view
-        
-
-        public void funcTestSortBog()
-        {
-            //var products = serviceAgent.funcTestSortBog();
-            TestSortBog = serviceAgent.funcTestSortBog();
-            KreditorChecked = true;
-        }
 
         public void funcRemoveSelectedPerson()
         {
             if (SelectedPerson != null)
             {
-                base.Model = default_;
-                TestSortBog.Remove(SelectedPerson);
+                Model.RemovePerson(SelectedPerson);
             }
         }
 
         public void AddNewPerson()
         {
-            TestSortBog.Add(new SorteBogModel(this.Model));
+            if (onPagePerson == null)
+                return;
+
+            Model.AddNewPerson(new Person(onPagePerson));
+        }
+
+       /* private void startChildView()
+        {
+            Window childView = new GaeldsposterView();
+
+            childView.Show();
+
+            System.Windows.Threading.Dispatcher.Run();
+
+        }*/
+        Window childView = new GaeldsposterView();
+        public void windowLoaded() 
+        {
+
+            /*Thread otherWindow = new Thread(new ThreadStart(startChildView));
+
+            otherWindow.SetApartmentState(ApartmentState.STA);
+
+            otherWindow.IsBackground = true;
+
+            otherWindow.Start();*/
+            
+
+            childView.Show();
         }
 
         public void windowClosed()
         {
-            serviceAgent.saveData();
+            Model.gemDenSorteBog();
         }
 
         public void testGaelViewModel()

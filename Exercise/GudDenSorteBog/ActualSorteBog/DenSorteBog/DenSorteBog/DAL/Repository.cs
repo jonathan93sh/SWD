@@ -13,7 +13,7 @@ namespace DenSorteBog.DAL
 {
     public static class Repository
     {
-        public static void WriteMeasurements(IList<SorteBogModel> measurements)
+        public static void WriteMeasurements(IList<Person> measurements)
         {
             JsonSerializer serializer = new JsonSerializer();
             using (StreamWriter sw = new StreamWriter(@"Measurements.json"))
@@ -23,7 +23,7 @@ namespace DenSorteBog.DAL
             }
         }
 
-        internal static ObservableCollection<SorteBogModel> ReadMeasurements()
+        internal static ObservableCollection<Person> ReadMeasurements()
         {
             string json = "";
             try
@@ -38,7 +38,7 @@ namespace DenSorteBog.DAL
             {
             }
 
-            return JsonConvert.DeserializeObject<ObservableCollection<SorteBogModel>>(json);
+            return JsonConvert.DeserializeObject<ObservableCollection<Person>>(json);
         }
     }
 }
