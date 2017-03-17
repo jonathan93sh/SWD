@@ -24,27 +24,15 @@
             Margin="86,30,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="{Binding Path=Model.MoneyValue}"
+            Text="{Binding Path=onPagePersonMoney}"
             TextWrapping="Wrap" />
-        <RadioButton
-            Margin="86,76,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Kreditor"
-            IsChecked="{Binding Path=KreditorChecked, Mode=TwoWay}"/>
-        <RadioButton
-            Margin="193,76,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Skylder" 
-            IsChecked="{Binding Path=SkylderChecked, Mode=TwoWay}"/>
         <TextBox
             Width="192"
             Height="22"
             Margin="86,3,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="{Binding Path=Model.PersonName}"
+            Text="{Binding Path=onPagePersonName}"
             TextWrapping="Wrap" />
         <Label
             Width="58"
@@ -105,7 +93,7 @@
                 Width="440"
                 Margin="240,45,-223,0"
                 HorizontalAlignment="Left" 
-                ItemsSource="{Binding Path=TestSortBog, Mode=TwoWay}"
+                ItemsSource="{Binding Path=Model.Persons, Mode=TwoWay}"
                 SelectedItem="{Binding Path=SelectedPerson, Mode=TwoWay}" Height="472" VerticalAlignment="Top"/>
             <Label
                 Height="31"
@@ -128,7 +116,7 @@
         <i:EventTrigger EventName="Loaded">
             <ei:CallMethodAction 
                 TargetObject="{Binding}"
-                MethodName="funcTestSortBog"/>
+                MethodName="windowLoaded"/>
         </i:EventTrigger>
         <i:EventTrigger EventName="Closed">
             <ei:CallMethodAction 
