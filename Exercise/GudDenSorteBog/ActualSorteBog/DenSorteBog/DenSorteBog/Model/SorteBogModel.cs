@@ -8,28 +8,35 @@ namespace DenSorteBog
 {
     public class SorteBogModel : ModelBase<SorteBogModel>
     {
+        public SorteBogModel()
+        { }
+        public SorteBogModel(SorteBogModel other)
+        {
+            PersonName = other.PersonName;
+            MoneyValue = other.MoneyValue;
+        }
 
         private string personName;
 
-        public string funcPersonName
+        public string PersonName
         {
             get { return personName; }
             set
             {
                 personName = value;
-                NotifyPropertyChanged(m => m.funcPersonName);
+                NotifyPropertyChanged(m => m.PersonName);
             }
         }
 
         private int moneyValue;
 
-        public string funcMoneyValue
+        public string MoneyValue
         {
             get { return moneyValue.ToString(); }
             set
             {
                 moneyValue = int.Parse(value);
-                NotifyPropertyChanged(m => m.funcMoneyValue);
+                NotifyPropertyChanged(m => m.MoneyValue);
             }
         }
     }

@@ -23,12 +23,17 @@ namespace DenSorteBog.ViewModel
         // TODO: Add a member for IXxxServiceAgent
         private ServiceAgent.ISorteBogServiceAgent serviceAgent;
 
+        SorteBogModel default_ = new SorteBogModel() { MoneyValue = "0", PersonName = "" };
+
         // Default ctor
-        public KreditorSkylderListViewModel() { }
+        public KreditorSkylderListViewModel() {
+            base.Model = default_;
+        }
 
         // TODO: ctor that accepts IXxxServiceAgent
         public KreditorSkylderListViewModel(ServiceAgent.ISorteBogServiceAgent serviceAgent)
         {
+            base.Model = default_;
             this.serviceAgent = serviceAgent;
         }
 
@@ -47,16 +52,7 @@ namespace DenSorteBog.ViewModel
             }
         }
 
-        
 
-        public void funcTestSortBog()
-        {
-            var products = serviceAgent.funcTestSortBog();
-            TestSortBog = new ObservableCollection<SorteBogModel>(products);
-        }
-
-
-        // TODO: Add methods that will be called by the view
         private SorteBogModel _SelectedPerson;
         public SorteBogModel SelectedPerson
         {
@@ -67,6 +63,69 @@ namespace DenSorteBog.ViewModel
                 _SelectedPerson = value;
                 NotifyPropertyChanged(m => m.SelectedPerson);
             }
+        }
+
+
+        private bool _KreditorChecked;
+        public bool KreditorChecked
+        {
+            get { return _KreditorChecked; }
+            set
+            {
+                _KreditorChecked = value;
+
+                if (KreditorChecked == SkylderChecked)
+                    SkylderChecked = !KreditorChecked;
+
+                NotifyPropertyChanged(m => m.KreditorChecked);
+            }
+        }
+
+        private bool _SkylderChecked;
+        public bool SkylderChecked
+        {
+            get { return _SkylderChecked; }
+            set
+            {
+                _SkylderChecked = value;
+                if (KreditorChecked == SkylderChecked)
+                    KreditorChecked = !SkylderChecked;
+                
+                NotifyPropertyChanged(m => m.SkylderChecked);
+            }
+        }
+
+
+
+
+
+        // TODO: Add methods that will be called by the view
+        
+
+        public void funcTestSortBog()
+        {
+            //var products = serviceAgent.funcTestSortBog();
+            TestSortBog = serviceAgent.funcTestSortBog();
+            KreditorChecked = true;
+        }
+
+        public void funcRemoveSelectedPerson()
+        {
+            if (SelectedPerson != null)
+            {
+                base.Model = default_;
+                TestSortBog.Remove(SelectedPerson);
+            }
+        }
+
+        public void AddNewPerson()
+        {
+            TestSortBog.Add(new SorteBogModel(this.Model));
+        }
+
+        public void windowClosed()
+        {
+
         }
         // TODO: Optionally add callback methods for async calls to the service agent
         
