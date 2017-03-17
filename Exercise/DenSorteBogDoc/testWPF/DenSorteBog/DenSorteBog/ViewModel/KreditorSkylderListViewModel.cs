@@ -25,7 +25,7 @@ namespace DenSorteBog.ViewModel
     public class KreditorSkylderListViewModel : ViewModelDetailBase<KreditorSkylderListViewModel, KreditorSkylderListModel>
     {
         // TODO: Add a member for IXxxServiceAgent
-        private IKreditorSkylderListServiceAgent serviceAgent;
+        private IServiceAgent serviceAgent;
 
         // Default ctor
         public KreditorSkylderListViewModel() { }
@@ -37,7 +37,7 @@ namespace DenSorteBog.ViewModel
         }
 
         // TODO: ctor that accepts IXxxServiceAgent
-        public KreditorSkylderListViewModel(IKreditorSkylderListServiceAgent serviceAgent)
+        public KreditorSkylderListViewModel(IServiceAgent serviceAgent)
         {
             this.serviceAgent = serviceAgent;
            

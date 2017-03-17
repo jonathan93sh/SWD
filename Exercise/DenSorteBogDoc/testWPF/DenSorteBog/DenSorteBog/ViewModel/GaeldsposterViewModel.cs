@@ -26,7 +26,7 @@ namespace DenSorteBog.ViewModel
     public class GaeldsposterViewModel : ViewModelDetailBase<GaeldsposterViewModel, GaeldsposterModel>
     {
         // TODO: Add a member for IXxxServiceAgent
-        private IGaeldsposterServiceAgent serviceAgent;
+        private IServiceAgent serviceAgent;
 
         // Default ctor
         public GaeldsposterViewModel() { }
@@ -38,7 +38,7 @@ namespace DenSorteBog.ViewModel
         }
 
         // TODO: ctor that accepts IXxxServiceAgent
-        public GaeldsposterViewModel(IGaeldsposterServiceAgent serviceAgent)
+        public GaeldsposterViewModel(IServiceAgent serviceAgent)
         {
             this.serviceAgent = serviceAgent;
         }

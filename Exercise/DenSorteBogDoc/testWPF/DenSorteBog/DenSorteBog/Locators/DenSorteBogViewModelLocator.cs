@@ -56,9 +56,9 @@ namespace DenSorteBog.Locators
         {
             get
             {
-                //IKreditorSkylderListServiceAgent serviceAgent = new KreditorSkylderListServiceAgent();
-                //return new KreditorSkylderListViewModel(serviceAgent);
-                return new KreditorSkylderListViewModel(new KreditorSkylderListModel());
+                IServiceAgent serviceAgent = new ServiceAgentFake();
+                return new KreditorSkylderListViewModel(serviceAgent);
+                //return new KreditorSkylderListViewModel(new KreditorSkylderListModel());
             }
         }
 
@@ -67,7 +67,7 @@ namespace DenSorteBog.Locators
         {
             get
             {
-                IGaeldsposterServiceAgent serviceAgent = new GaeldsposterServiceAgent();
+                IServiceAgent serviceAgent = new ServiceAgentFake();
                 return new GaeldsposterViewModel(serviceAgent);
                 //return new GaeldsposterViewModel(new GaeldsposterModel());
             }
