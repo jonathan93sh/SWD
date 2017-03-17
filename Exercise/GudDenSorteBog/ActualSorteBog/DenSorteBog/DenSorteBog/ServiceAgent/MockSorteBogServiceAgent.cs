@@ -32,22 +32,25 @@ namespace DenSorteBog.ServiceAgent
         public ObservableCollection<SorteBogModel> funcTestSortBog()
         {
             
+
             if (sorteBog == null)
             {
-                sorteBog = new ObservableCollection<SorteBogModel>(new List<SorteBogModel>
-            {
-                new SorteBogModel { MoneyValue = "-2546", PersonName = "Jens Jensen" },
-                new SorteBogModel { MoneyValue = "2842", PersonName = "Bent Bentsen" },
-                new SorteBogModel { MoneyValue = "31235", PersonName = "Lars Larsen" },
-                new SorteBogModel { MoneyValue = "-20000", PersonName = "Indiana Jones" },
-                new SorteBogModel { MoneyValue = "510283", PersonName = "Pablo Escobar" }
-            });
+                SorteBog = DAL.Repository.ReadMeasurements();
+
+                if(SorteBog == null)
+                {
+                    SorteBog = new ObservableCollection<SorteBogModel>();
+                }
             }
 
-            return sorteBog;
-
-
+            return SorteBog;
         }
+
+        public void saveData()
+        {
+            DAL.Repository.WriteMeasurements(sorteBog);
+        }
+
 
     }
 }

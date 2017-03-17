@@ -75,6 +75,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Repository.cs" />
     <Compile Include="Locators\DenSorteBogViewModelLocator.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\SorteBogModel.cs" />
