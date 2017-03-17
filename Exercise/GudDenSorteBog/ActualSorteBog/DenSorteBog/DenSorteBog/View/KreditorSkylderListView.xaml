@@ -23,7 +23,7 @@
             Margin="86,30,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="TextBox"
+            Text="{Binding Path=Model.funcMoneyValue}"
             TextWrapping="Wrap" />
         <RadioButton
             Margin="86,76,0,0"
@@ -41,20 +41,20 @@
             Margin="86,3,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="TextBox"
+            Text="{Binding Path=Model.funcPersonName}"
             TextWrapping="Wrap" />
         <Label
             Width="58"
             Margin="0,3,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Label" />
+            Content="Navn" />
         <Label
             Width="58"
             Margin="0,29,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Label" />
+            Content="Penge" />
         <Button
             Width="88"
             Height="39"
@@ -95,7 +95,8 @@
                 Margin="10,50,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top" 
-                ItemsSource="{Binding Path=TestSortBog, Mode=TwoWay}"/>
+                ItemsSource="{Binding Path=TestSortBog, Mode=TwoWay}"
+                SelectedItem="{Binding Path=SelectedPerson, Mode=TwoWay}"/>
             <DataGrid
                 Grid.Column="1"
                 Width="439"

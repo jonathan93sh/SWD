@@ -47,6 +47,8 @@ namespace DenSorteBog.ViewModel
             }
         }
 
+        
+
         public void funcTestSortBog()
         {
             var products = serviceAgent.funcTestSortBog();
@@ -55,7 +57,17 @@ namespace DenSorteBog.ViewModel
 
 
         // TODO: Add methods that will be called by the view
-
+        private SorteBogModel _SelectedPerson;
+        public SorteBogModel SelectedPerson
+        {
+            get { return _SelectedPerson; }
+            set
+            {
+                base.Model = value;
+                _SelectedPerson = value;
+                NotifyPropertyChanged(m => m.SelectedPerson);
+            }
+        }
         // TODO: Optionally add callback methods for async calls to the service agent
         
         // Helper method to notify View of an error

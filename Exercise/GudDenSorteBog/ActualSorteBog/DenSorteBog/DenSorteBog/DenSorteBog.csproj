@@ -78,6 +78,7 @@
     <Compile Include="Locators\DenSorteBogViewModelLocator.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\SorteBogModel.cs" />
+    <Compile Include="Observer.cs" />
     <Compile Include="ServiceAgent\ISorteBogServiceAgent.cs" />
     <Compile Include="ServiceAgent\MockSorteBogServiceAgent.cs" />
     <Compile Include="ViewModel\GaeldsposterViewModel.cs" />

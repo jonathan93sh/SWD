@@ -23,12 +23,12 @@ namespace DenSorteBog
 
         private int moneyValue;
 
-        public int funcMoneyValue
+        public string funcMoneyValue
         {
-            get { return moneyValue; }
+            get { return moneyValue.ToString(); }
             set
             {
-                moneyValue = value;
+                moneyValue = int.Parse(value);
                 NotifyPropertyChanged(m => m.funcMoneyValue);
             }
         }
