@@ -77,6 +77,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\KreditoreSkyldereView.xaml.cs">
+      <DependentUpon>KreditoreSkyldereView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GealdsposterView.xaml.cs">
+      <DependentUpon>GealdsposterView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\SorteBogModel.cs" />
     <Compile Include="Services\ISorteBogServiceAgent.cs" />
     <Compile Include="Services\MockSorteBogServiceAgent.cs" />
@@ -89,12 +95,14 @@
     <Compile Include="Services\ICustomerServiceAgent.cs" />
     <Compile Include="Services\MockCustomerServiceAgent.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
-    <Compile Include="Views\Gealdsposter.xaml.cs">
-      <DependentUpon>Gealdsposter.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\KredSkyldView.xaml.cs">
-      <DependentUpon>KredSkyldView.xaml</DependentUpon>
-    </Compile>
+    <Page Include="Views\KreditoreSkyldereView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GealdsposterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CustomerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,14 +119,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Gealdsposter.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\KredSkyldView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Customer.cs" />

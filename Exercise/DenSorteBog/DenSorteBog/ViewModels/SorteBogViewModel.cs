@@ -36,6 +36,23 @@ namespace DenSorteBog
         public event EventHandler<NotificationEventArgs<Exception>> ErrorNotice;
 
         // TODO: Add properties using the mvvmprop code snippet
+        private ObservableCollection<SorteBogModel> sorteBog;
+        public ObservableCollection<SorteBogModel> TestSortBog
+        {
+            get { return sorteBog; }
+            set
+            {
+                sorteBog = value;
+                NotifyPropertyChanged(vm => vm.TestSortBog);
+            }
+        }
+
+        public void funcTestSortBog()
+        {
+            var products = serviceAgent.funcTestSortBog();
+            TestSortBog = new ObservableCollection<SorteBogModel>(products);
+        }
+
 
         // TODO: Add methods that will be called by the view
 

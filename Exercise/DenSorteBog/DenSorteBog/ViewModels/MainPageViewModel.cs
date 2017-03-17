@@ -37,7 +37,7 @@ namespace DenSorteBog
 
         // Add properties using the mvvmprop code snippet
 
-        private string bannerText = "Hello Simple MVVM Toolkit";
+        private string bannerText = "Den Sorte Bog";
         public string BannerText
         {
             get
