@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -15,13 +16,13 @@ using System.Windows.Shapes;
 namespace DenSorteBog
 {
     /// <summary>
-    /// Interaction logic for Gealdsposter.xaml
+    /// Interaction logic for GealdsposterView.xaml
     /// </summary>
-    public partial class Gealdsposter : UserControl
+    public partial class GealdsposterView : UserControl
     {
-        public Gealdsposter()
+        public GealdsposterView()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

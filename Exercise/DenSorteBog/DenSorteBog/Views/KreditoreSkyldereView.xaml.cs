@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DenSorteBog.Views
+namespace DenSorteBog
 {
     /// <summary>
-    /// Interaction logic for KredSkyldView.xaml
+    /// Interaction logic for KreditoreSkyldereView.xaml
     /// </summary>
-    public partial class KredSkyldView : UserControl
+    public partial class KreditoreSkyldereView : UserControl
     {
-        public KredSkyldView()
+        public KreditoreSkyldereView()
         {
             InitializeComponent();
         }
