@@ -23,7 +23,7 @@ namespace DenSorteBog.ViewModel
     /// Use the <strong>mvvmprop</strong> snippet to add bindable properties to this ViewModel.
     /// </para>
     /// </summary>
-    public class GaeldsposterViewModel : ViewModelDetailBase<GaeldsposterViewModel, GaeldsposterModel>
+    public class GaeldsposterViewModel : ViewModelDetailBase<GaeldsposterViewModel, MonitorModel>
     {
         // TODO: Add a member for IXxxServiceAgent
         private IServiceAgent serviceAgent;
@@ -32,7 +32,7 @@ namespace DenSorteBog.ViewModel
         public GaeldsposterViewModel() { }
 
         // TODO: Ctor to set base.Model to DetailType
-        public GaeldsposterViewModel(GaeldsposterModel model)
+        public GaeldsposterViewModel(MonitorModel model)
         {
             base.Model = model;
         }

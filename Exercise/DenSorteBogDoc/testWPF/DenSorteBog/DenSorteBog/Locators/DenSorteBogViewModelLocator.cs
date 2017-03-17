@@ -50,14 +50,14 @@ namespace DenSorteBog.Locators
     {
         // TODO: Use mvvmlocator or mvvmlocatornosa code snippets
         // to add ViewModels to the locator.
-
+        static Model.MonitorModel TheModelHack = new MonitorModel(); 
         // Create KreditorSkylderListViewModel on demand
         public KreditorSkylderListViewModel KreditorSkylderListViewModel
         {
             get
             {
-                IServiceAgent serviceAgent = new ServiceAgentFake();
-                return new KreditorSkylderListViewModel(serviceAgent);
+                //IServiceAgent serviceAgent = new ServiceAgentFake();
+                return new KreditorSkylderListViewModel(TheModelHack);
                 //return new KreditorSkylderListViewModel(new KreditorSkylderListModel());
             }
         }
@@ -67,8 +67,8 @@ namespace DenSorteBog.Locators
         {
             get
             {
-                IServiceAgent serviceAgent = new ServiceAgentFake();
-                return new GaeldsposterViewModel(serviceAgent);
+                //IServiceAgent serviceAgent = new ServiceAgentFake();
+                return new GaeldsposterViewModel(TheModelHack);
                 //return new GaeldsposterViewModel(new GaeldsposterModel());
             }
         }

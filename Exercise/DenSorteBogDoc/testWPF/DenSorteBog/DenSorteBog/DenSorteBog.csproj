@@ -78,10 +78,14 @@
     <Compile Include="Locators\DenSorteBogViewModelLocator.cs" />
     <Compile Include="Model\GaeldsposterModel.cs" />
     <Compile Include="Model\KreditorSkylderListModel.cs" />
+    <Compile Include="Model\MonitorModel.cs" />
+    <Compile Include="Model\Person.cs" />
     <Compile Include="ServiceAgent\GaeldsposterServiceAgent.cs" />
     <Compile Include="ServiceAgent\IGaeldsposterServiceAgent.cs" />
     <Compile Include="ServiceAgent\IKreditorSkylderListServiceAgent.cs" />
+    <Compile Include="ServiceAgent\IServiceAgent.cs" />
     <Compile Include="ServiceAgent\KreditorSkylderListServiceAgent.cs" />
+    <Compile Include="ServiceAgent\ServiceAgentFake.cs" />
     <Compile Include="ViewModel\GaeldsposterViewModel.cs" />
     <Compile Include="ViewModel\KreditorSkylderListViewModel.cs" />
     <Compile Include="View\GaeldsposterView.xaml.cs">

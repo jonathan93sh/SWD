@@ -31,7 +31,7 @@
             <TextBox Grid.Row="0" Grid.Column="1" Margin="0,2,0,2" VerticalContentAlignment="Center" Name="tbxStationId"/>
             <Label Grid.Row="1" Grid.Column="0" Content="Date" HorizontalAlignment="Left"/>
             <DatePicker Grid.Row="1" Grid.Column="1" Margin="0,2,0,2" VerticalContentAlignment="Center" Name="dpDate" SelectedDateChanged="dpDate_SelectedDateChanged"/>
-            <Label Grid.Row="2" Grid.Column="0" Content="Target" HorizontalAlignment="Left"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Target" HorizontalAlignment="Left" Margin="0,19,0,10" Grid.RowSpan="2"/>
             <TextBox Grid.Row="2" Grid.Column="1" Margin="0,2,0,2" VerticalContentAlignment="Center" Name="tbxTarget" IsReadOnly="True"/>
             <Label Grid.Row="3" Grid.Column="0" Content="Actual" HorizontalAlignment="Left"/>
             <TextBox Grid.Row="3" Grid.Column="1" Margin="0,2,0,2" VerticalContentAlignment="Center" Name="tbxActual" LostFocus="tbxActual_LostFocus"/>

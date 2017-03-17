@@ -22,7 +22,7 @@ namespace DenSorteBog.ViewModel
     /// Use the <strong>mvvmprop</strong> snippet to add bindable properties to this ViewModel.
     /// </para>
     /// </summary>
-    public class KreditorSkylderListViewModel : ViewModelDetailBase<KreditorSkylderListViewModel, KreditorSkylderListModel>
+    public class KreditorSkylderListViewModel : ViewModelDetailBase<KreditorSkylderListViewModel, MonitorModel>
     {
         // TODO: Add a member for IXxxServiceAgent
         private IServiceAgent serviceAgent;
@@ -31,7 +31,7 @@ namespace DenSorteBog.ViewModel
         public KreditorSkylderListViewModel() { }
 
         // TODO: Ctor to set base.Model to DetailType
-        public KreditorSkylderListViewModel(KreditorSkylderListModel model)
+        public KreditorSkylderListViewModel(MonitorModel model)
         {
             base.Model = model;
         }
