@@ -7,11 +7,10 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="KreditorSkylderListView"
-    Width="468.167"
-    Height="770.333"
+    Width="459.212"
+    Height="749.437"
     DataContext="{Binding Source={StaticResource Locator}, Path=KreditorSkylderListViewModel}"
-    mc:Ignorable="d"
-    >
+    mc:Ignorable="d">
     <Grid
         Width="280"
         Height="144"
@@ -31,13 +30,13 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Kreditor"
-            IsChecked="{Binding Path=KreditorChecked, Mode=TwoWay}"/>
+            IsChecked="{Binding Path=KreditorChecked, Mode=TwoWay}" />
         <RadioButton
             Margin="193,76,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Skylder" 
-            IsChecked="{Binding Path=SkylderChecked, Mode=TwoWay}"/>
+            Content="Skylder"
+            IsChecked="{Binding Path=SkylderChecked, Mode=TwoWay}" />
         <TextBox
             Width="192"
             Height="22"
@@ -64,14 +63,12 @@
             Margin="190,102,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="fjern" >
-            <!-- Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll -->
-            <!-- Use mvvmxmlns snippet to add i and ei namespace prefixes -->
+            Content="fjern">
+            <!--  Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll  -->
+            <!--  Use mvvmxmlns snippet to add i and ei namespace prefixes  -->
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
-                    <ei:CallMethodAction 
-                TargetObject="{Binding}"
-                MethodName="funcRemoveSelectedPerson"/>
+                    <ei:CallMethodAction MethodName="funcRemoveSelectedPerson" TargetObject="{Binding}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
 
@@ -83,33 +80,33 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Tilføj Person">
-            <!-- Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll -->
-            <!-- Use mvvmxmlns snippet to add i and ei namespace prefixes -->
+            <!--  Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll  -->
+            <!--  Use mvvmxmlns snippet to add i and ei namespace prefixes  -->
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
-                    <ei:CallMethodAction 
-                TargetObject="{Binding}"
-                MethodName="AddNewPerson"/>
+                    <ei:CallMethodAction MethodName="AddNewPerson" TargetObject="{Binding}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
         <Grid
             Width="457"
-            Margin="-318,-567,0,147"
-            HorizontalAlignment="Left">
+            Margin="-79,-566,-98,146"
+            HorizontalAlignment="Right">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <DataGrid
                 Name="KredSkyldGrid"
                 Width="440"
-                Margin="240,45,-223,0"
-                HorizontalAlignment="Left" 
+                Height="472"
+                Margin="0,41,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
                 ItemsSource="{Binding Path=TestSortBog, Mode=TwoWay}"
-                SelectedItem="{Binding Path=SelectedPerson, Mode=TwoWay}" Height="472" VerticalAlignment="Top"/>
+                SelectedItem="{Binding Path=SelectedPerson, Mode=TwoWay}" />
             <Label
                 Height="31"
-                Margin="390,10,-67,0"
+                Margin="159,5,164,0"
                 VerticalAlignment="Top"
                 Content="Kreditorere og skyldere" />
             <Label
@@ -122,21 +119,17 @@
         </Grid>
     </Grid>
 
-    <!-- Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll -->
-    <!-- Use mvvmxmlns snippet to add i and ei namespace prefixes -->
+    <!--  Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll  -->
+    <!--  Use mvvmxmlns snippet to add i and ei namespace prefixes  -->
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <ei:CallMethodAction 
-                TargetObject="{Binding}"
-                MethodName="funcTestSortBog"/>
+            <ei:CallMethodAction MethodName="funcTestSortBog" TargetObject="{Binding}" />
         </i:EventTrigger>
         <i:EventTrigger EventName="Closed">
-            <ei:CallMethodAction 
-                TargetObject="{Binding}"
-                MethodName="windowClosed"/>
+            <ei:CallMethodAction MethodName="windowClosed" TargetObject="{Binding}" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
-    <!-- Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll -->
-    <!-- Use mvvmxmlns snippet to add i and ei namespace prefixes -->
+    <!--  Add reference to Microsoft.Expression.Interactions.dll, System.Windows.Interactivity.dll  -->
+    <!--  Use mvvmxmlns snippet to add i and ei namespace prefixes  -->
 
 </Window>

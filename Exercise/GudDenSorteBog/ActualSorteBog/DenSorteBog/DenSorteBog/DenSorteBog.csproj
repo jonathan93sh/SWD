@@ -35,22 +35,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleMvvmToolkit.5.5.1.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+      <HintPath>..\packages\SimpleMvvmToolkit.Portable.5.5.1.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleMvvmToolkit-Common">
-      <HintPath>..\packages\SimpleMvvmToolkit.5.5.1.0\lib\net45\SimpleMvvmToolkit-Common.dll</HintPath>
+    <Reference Include="SimpleMvvmToolkit-Common, Version=5.5.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SimpleMvvmToolkit.Portable.5.5.1.0\lib\net45\SimpleMvvmToolkit-Common.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleMvvmToolkit-WPF">
-      <HintPath>..\packages\SimpleMvvmToolkit.5.5.1.0\lib\net45\SimpleMvvmToolkit-WPF.dll</HintPath>
+    <Reference Include="SimpleMvvmToolkit-WPF, Version=5.5.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SimpleMvvmToolkit.Portable.5.5.1.0\lib\net45\SimpleMvvmToolkit-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleMvvmToolkit.Express, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleMvvmToolkit.Express.1.0.0\lib\portable-net45+netcore45+wpa81\SimpleMvvmToolkit.Express.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleMvvmToolkit.5.5.1.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\SimpleMvvmToolkit.Portable.5.5.1.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Locators\DenSorteBogViewModelLocator.cs" />
+    <Compile Include="Model\MessageTokens.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\SorteBogModel.cs" />
     <Compile Include="Observer.cs" />

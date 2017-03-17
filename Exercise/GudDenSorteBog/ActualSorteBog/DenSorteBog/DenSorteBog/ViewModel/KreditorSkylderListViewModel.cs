@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Threading;
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 // Toolkit namespace
 using SimpleMvvmToolkit;
@@ -127,6 +128,14 @@ namespace DenSorteBog.ViewModel
         {
 
         }
+
+        public void testGaelViewModel()
+        {
+            MessageBus.Default.Notify(MessageTokens.Navigation, this, new NotificationEventArgs(PageNames.Home));
+
+            SendMessage(MessageTokens.Navigation, new NotificationEventArgs<string>(MessageTokens.Navigation, "MyMessage"));
+        }
+
         // TODO: Optionally add callback methods for async calls to the service agent
         
         // Helper method to notify View of an error
