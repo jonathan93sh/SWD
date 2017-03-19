@@ -49,10 +49,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SimpleMvvmToolkit.Portable.5.5.1.0\lib\net45\SimpleMvvmToolkit-WPF.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleMvvmToolkit.Express, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleMvvmToolkit.Express.1.0.0\lib\portable-net45+netcore45+wpa81\SimpleMvvmToolkit.Express.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -83,10 +79,10 @@
   <ItemGroup>
     <Compile Include="DAL\Repository.cs" />
     <Compile Include="Locators\DenSorteBogViewModelLocator.cs" />
-    <Compile Include="Model\MessageTokens.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\SorteBogModel.cs" />
     <Compile Include="Observer.cs" />
+    <Compile Include="RelayCommand.cs" />
     <Compile Include="ViewModel\GaeldsposterViewModel.cs" />
     <Compile Include="ViewModel\KreditorSkylderListViewModel.cs" />
     <Compile Include="View\GaeldsposterView.xaml.cs">

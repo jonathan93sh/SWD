@@ -22,9 +22,9 @@
             Margin="270,636,-38,-362"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Label" />
+            Content="{Binding Path=Model.totalGaeld}" />
         <DataGrid Name="skylderList" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="598" Width="578"
-                  ItemsSource="{Binding Path=Model.Persons, Mode=TwoWay}"/>
+                  ItemsSource="{Binding Path=Model.PersonsSkyldere, Mode=TwoWay}" IsReadOnly="True"/>
 
     </Grid>
 </Window>

@@ -4,7 +4,8 @@ using System.Windows.Input;
 using System.Threading;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
-
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 // Toolkit namespace
 using SimpleMvvmToolkit;
 
@@ -12,6 +13,8 @@ using SimpleMvvmToolkit;
 using SimpleMvvmToolkit.ModelExtensions;
 
 using DenSorteBog.Model;
+
+using MvvmFoundation.Wpf;
 
 namespace DenSorteBog.ViewModel
 {
@@ -68,11 +71,11 @@ namespace DenSorteBog.ViewModel
             get { return _SelectedPerson; }
             set
             {
-                if (value == null)
-                    return;
+                //if (value == null)
+                    //return;
 
                 _SelectedPerson = value;
-                NotifyPropertyChanged(m => m.SelectedPerson);
+                NotifyPropertyChanged(mv => mv.SelectedPerson);
             }
         }
 
@@ -81,45 +84,60 @@ namespace DenSorteBog.ViewModel
 
 
         // TODO: Add methods that will be called by the view
+        ICommand _RemoveSelectedPersonCommand;
+        public ICommand RemoveSelectedPersonCommand
+        {
+            get { return _RemoveSelectedPersonCommand ?? (_RemoveSelectedPersonCommand = new RelayCommand(RemoveSelectedPerson, RemoveSelectedPersonCanExecute)); }
+        }
 
-        public void funcRemoveSelectedPerson()
+
+        void RemoveSelectedPerson()
         {
             if (SelectedPerson != null)
             {
                 Model.RemovePerson(SelectedPerson);
+                SelectedPerson = null;
             }
         }
 
-        public void AddNewPerson()
+        bool RemoveSelectedPersonCanExecute()
+        {
+            if(SelectedPerson != null)
+                return true;
+
+            return false;
+
+        }
+
+
+        ICommand _AddNewPersonCommand;
+        public ICommand AddNewPersonCommand
+        {
+            get { return _AddNewPersonCommand ?? (_AddNewPersonCommand = new RelayCommand(AddNewPerson, AddNewPersonCanExecute)); }
+        }
+
+        void AddNewPerson()
         {
             if (onPagePerson == null)
                 return;
 
             Model.AddNewPerson(new Person(onPagePerson));
+            
         }
 
-       /* private void startChildView()
+        bool AddNewPersonCanExecute()
         {
-            Window childView = new GaeldsposterView();
+            if (onPagePerson == null || onPagePerson.money == 0.0 || onPagePersonMoney == "" || onPagePersonName == "" || Model.nameExist(onPagePersonName))
+                return false;
 
-            childView.Show();
 
-            System.Windows.Threading.Dispatcher.Run();
+            return true;
+        }
 
-        }*/
+
         Window childView = new GaeldsposterView();
         public void windowLoaded() 
         {
-
-            /*Thread otherWindow = new Thread(new ThreadStart(startChildView));
-
-            otherWindow.SetApartmentState(ApartmentState.STA);
-
-            otherWindow.IsBackground = true;
-
-            otherWindow.Start();*/
-            
-
             childView.Show();
         }
 
@@ -128,15 +146,27 @@ namespace DenSorteBog.ViewModel
             Model.gemDenSorteBog();
         }
 
-        public void testGaelViewModel()
+    /*    public void testGaelViewModel()
         {
             MessageBus.Default.Notify(MessageTokens.Navigation, this, new NotificationEventArgs(PageNames.Home));
 
             SendMessage(MessageTokens.Navigation, new NotificationEventArgs<string>(MessageTokens.Navigation, "MyMessage"));
-        }
+        }*/
 
         // TODO: Optionally add callback methods for async calls to the service agent
-        
+
+        /*
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        */
         // Helper method to notify View of an error
         private void NotifyError(string message, Exception error)
         {
