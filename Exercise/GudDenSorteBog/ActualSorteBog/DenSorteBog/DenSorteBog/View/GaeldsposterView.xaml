@@ -5,26 +5,20 @@
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
     xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
     Title="GaeldsposterView"
-    Width="605.667"
-    Height="704"
-    DataContext="{Binding Source={StaticResource Locator}, Path=GaeldsposterViewModel}">
+    Width="228.667"
+    Height="244"
+    DataContext="{Binding Source={StaticResource Locator}, Path=GaeldsposterViewModel}" Closing="Window_Closing">
 
     <Grid>
         <Label
-            Width="76"
-            Height="26"
-            Margin="262,7,-38,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Gældsposter" />
+            Margin="10,10,0,0"
+            Content="Gældsposter" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" />
         <Label
-            Width="68"
-            Margin="270,636,-38,-362"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="{Binding Path=Model.totalGaeld}" />
-        <DataGrid Name="skylderList" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="598" Width="578"
+            Margin="81,0,10,10"
+            Content="{Binding Path=Model.totalGaeld}" Height="26" VerticalAlignment="Bottom" />
+        <DataGrid Name="skylderList" Margin="10,41,10,42"
                   ItemsSource="{Binding Path=Model.PersonsSkyldere, Mode=TwoWay}" IsReadOnly="True"/>
+        <Label Content="Total gæld" HorizontalAlignment="Left" Margin="10,0,0,10" Height="26" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>

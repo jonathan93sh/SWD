@@ -27,21 +27,39 @@ namespace DenSorteBog.ViewModel
     public class KreditorSkylderListViewModel : ViewModelDetailBase<KreditorSkylderListViewModel, SorteBogModel>
     {
 
-        
-
-        // TODO: Add a member for IXxxServiceAgent
-        //private ServiceAgent.ISorteBogServiceAgent serviceAgent;
         private Model.Person default_ = new Model.Person() { money = 0.0, name = "" };
 
-        public Model.Person onPagePerson { get { return default_; } set { default_ = value; NotifyPropertyChanged<Person>(mv => mv.onPagePerson); } }
+        public Model.Person onPagePerson { 
+            get {
+
+                return default_; 
+            } 
+            set { 
+                default_ = value; 
+                NotifyPropertyChanged<Person>(mv => mv.onPagePerson); 
+            } 
+        }
 
         public string onPagePersonName { get { return onPagePerson.name; } set { onPagePerson.name = value; NotifyPropertyChanged<String>(mv => mv.onPagePersonName); } }
 
-        public string onPagePersonMoney { get { return onPagePerson.money.ToString() ; } set { onPagePerson.money = double.Parse(value); NotifyPropertyChanged<String>(mv => mv.onPagePersonMoney); } }
+        public string onPagePersonMoney { get { return onPagePerson.money.ToString() ; } 
+            set { 
+                double tmp;
+                if(double.TryParse(value, out tmp))
+                {
+                    onPagePerson.money = tmp;
+                }
+                else
+                {
+                    onPagePerson.money = 0.0;
+                }
+                NotifyPropertyChanged<String>(mv => mv.onPagePersonMoney); 
+            } 
+        }
 
 
         // Default ctor
-        public KreditorSkylderListViewModel() {
+        private KreditorSkylderListViewModel() {
             
         }
 
@@ -50,15 +68,6 @@ namespace DenSorteBog.ViewModel
         {
             base.Model = model;
         }
-
-
-        // TODO: ctor that accepts IXxxServiceAgent
-        /*public KreditorSkylderListViewModel(ServiceAgent.ISorteBogServiceAgent serviceAgent)
-        {
-            base.Model = default_;
-            this.serviceAgent = serviceAgent;
-        }*/
-
         // TODO: Add events to notify the view or obtain data from the view
         public event EventHandler<NotificationEventArgs<Exception>> ErrorNotice;
 
@@ -71,10 +80,14 @@ namespace DenSorteBog.ViewModel
             get { return _SelectedPerson; }
             set
             {
-                //if (value == null)
-                    //return;
 
+                if(value != null)
+                {
+                    onPagePersonName = value.name;
+                    onPagePersonMoney = value.money.ToString();
+                }
                 _SelectedPerson = value;
+
                 NotifyPropertyChanged(mv => mv.SelectedPerson);
             }
         }
@@ -135,7 +148,34 @@ namespace DenSorteBog.ViewModel
         }
 
 
-        Window childView = new GaeldsposterView();
+
+        ICommand _ChangePersonCommand;
+        public ICommand ChangePersonCommand
+        {
+            get { return _ChangePersonCommand ?? (_ChangePersonCommand = new RelayCommand(ChangePerson, ChangePersonCanExecute)); }
+        }
+
+        void ChangePerson()
+        {
+            if (SelectedPerson == null)
+                return;
+
+            Model.ChangePerson(SelectedPerson, onPagePerson.name, onPagePerson.money);
+            onPagePersonName = "";
+            onPagePersonMoney = "0.0";
+        }
+
+        bool ChangePersonCanExecute()
+        {
+            if (SelectedPerson == null || onPagePerson.money == 0.0 || onPagePersonMoney == "" || onPagePersonName == "")
+                return false;
+
+
+            return true;
+        }
+
+
+        GaeldsposterView childView = new GaeldsposterView();
         public void windowLoaded() 
         {
             childView.Show();
@@ -144,29 +184,10 @@ namespace DenSorteBog.ViewModel
         public void windowClosed()
         {
             Model.gemDenSorteBog();
+            childView.AreClosing = true;
+            childView.Close();
         }
 
-    /*    public void testGaelViewModel()
-        {
-            MessageBus.Default.Notify(MessageTokens.Navigation, this, new NotificationEventArgs(PageNames.Home));
-
-            SendMessage(MessageTokens.Navigation, new NotificationEventArgs<string>(MessageTokens.Navigation, "MyMessage"));
-        }*/
-
-        // TODO: Optionally add callback methods for async calls to the service agent
-
-        /*
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-        */
         // Helper method to notify View of an error
         private void NotifyError(string message, Exception error)
         {

@@ -9,8 +9,6 @@ using DenSorteBog.Model;
 using SimpleMvvmToolkit;
 using SimpleMvvmToolkit.ModelExtensions;
 
-using DenSorteBog.Model;
-
 
 namespace DenSorteBog.ViewModel
 {
@@ -30,7 +28,7 @@ namespace DenSorteBog.ViewModel
         //private ServiceAgent.ISorteBogServiceAgent serviceAgent;
 
         // Default ctor
-        public GaeldsposterViewModel() { }
+        private GaeldsposterViewModel() { }
 
         // TODO: Ctor to set base.Model to DetailType
         public GaeldsposterViewModel(SorteBogModel model)

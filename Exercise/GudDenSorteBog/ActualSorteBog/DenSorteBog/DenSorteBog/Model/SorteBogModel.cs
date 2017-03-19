@@ -14,18 +14,26 @@ namespace DenSorteBog.Model
 
         public SorteBogModel()
         {
-            ObservableCollection<Person> tmp = Repository.ReadMeasurements();
-
-            foreach(Person p in Repository.ReadMeasurements())
+            if(Persons_ == null || skyldere_ == null)
             {
-                AddNewPerson(p);
+                Persons_ = new ObservableCollection<Person>();
+                skyldere_ = new ObservableCollection<Person>();
+                ObservableCollection<Person> tmp = Repository.ReadPersons();
+
+                foreach (Person p in Repository.ReadPersons())
+                {
+                    AddNewPerson(p);
+                }
             }
+
+
+            
 
         }
 
-        private static ObservableCollection<Person> Persons_ = new ObservableCollection<Person>();
+        private static ObservableCollection<Person> Persons_ = null;
 
-        private ObservableCollection<Person> skyldere_ = new ObservableCollection<Person>();
+        private static ObservableCollection<Person> skyldere_ = null;
 
 
         public ObservableCollection<Person> Persons { get { return Persons_; }
@@ -46,7 +54,7 @@ namespace DenSorteBog.Model
             
         }
 
-        private double _totalGaeld;
+        private static double _totalGaeld;
         public double totalGaeld
         {
             get { return _totalGaeld; }
@@ -79,12 +87,12 @@ namespace DenSorteBog.Model
 
         private void calcTotalGaeld()
         {
-            _totalGaeld = 0;
+            double tmpGaeld = 0;
             foreach (Person p in skyldere_)
             {
-                _totalGaeld += p.money;
+                tmpGaeld += p.money;
             }
-            NotifyPropertyChanged(m => m.totalGaeld);
+            totalGaeld = tmpGaeld;
         }
 
         public bool nameExist(string name)
@@ -97,9 +105,16 @@ namespace DenSorteBog.Model
             return false;
         }
 
+        public void ChangePerson(Person p, string newName, double value)
+        {
+            RemovePerson(p);
+
+            AddNewPerson(new Person() { name = newName, money = value });
+        }
+
         public void gemDenSorteBog()
         {
-            Repository.WriteMeasurements(Persons_);
+            Repository.WritePersons(Persons_);
         }
     }
 }

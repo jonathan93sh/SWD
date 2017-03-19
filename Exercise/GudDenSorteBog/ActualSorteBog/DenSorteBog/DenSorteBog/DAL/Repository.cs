@@ -13,22 +13,22 @@ namespace DenSorteBog.DAL
 {
     public static class Repository
     {
-        public static void WriteMeasurements(IList<Person> measurements)
+        public static void WritePersons(IList<Person> Persons)
         {
             JsonSerializer serializer = new JsonSerializer();
-            using (StreamWriter sw = new StreamWriter(@"Measurements.json"))
+            using (StreamWriter sw = new StreamWriter(@"Persons.json"))
             using (JsonWriter writer = new JsonTextWriter(sw))
             {
-                serializer.Serialize(writer, measurements);
+                serializer.Serialize(writer, Persons);
             }
         }
 
-        internal static ObservableCollection<Person> ReadMeasurements()
+        internal static ObservableCollection<Person> ReadPersons()
         {
             string json = "";
             try
             {
-                using (StreamReader sr = new StreamReader(@"Measurements.json"))
+                using (StreamReader sr = new StreamReader(@"Persons.json"))
                 {
 
                     json = sr.ReadToEnd();
@@ -36,6 +36,7 @@ namespace DenSorteBog.DAL
             }
             catch (FileNotFoundException)
             {
+                return new ObservableCollection<Person>();
             }
 
             return JsonConvert.DeserializeObject<ObservableCollection<Person>>(json);

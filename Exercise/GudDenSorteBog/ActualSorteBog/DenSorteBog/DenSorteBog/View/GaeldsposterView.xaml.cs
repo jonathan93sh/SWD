@@ -19,9 +19,15 @@ namespace DenSorteBog
     /// </summary>
     public partial class GaeldsposterView : Window
     {
+        public bool AreClosing = false;
         public GaeldsposterView()
         {
             InitializeComponent();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = !AreClosing;
         }
     }
 }
