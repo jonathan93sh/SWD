@@ -1,0 +1,6 @@
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\bin\Debug\DelightfullyParallelLoops.exe.config
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\bin\Debug\DelightfullyParallelLoops.exe
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\bin\Debug\DelightfullyParallelLoops.pdb
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\obj\Debug\DelightfullyParallelLoops.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\obj\Debug\DelightfullyParallelLoops.exe
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\obj\Debug\DelightfullyParallelLoops.pdb

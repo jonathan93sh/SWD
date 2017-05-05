@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DelightfullyParallelLoops
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            const long N = 9000000;
+            double[] A, B, C;
+            A = new double[N];
+            B = new double[N];
+            C = new double[N];
+
+            Console.WriteLine("Starts sequential for now.");
+            stopwatch.Start();
+
+
+
+            for (int i = 0; i < N; i++)
+            {
+                C[i] = A[i] * B[i];
+            }
+            stopwatch.Stop();
+            Console.WriteLine("Sequential loop time in milliseconds: {0}", stopwatch.ElapsedMilliseconds);
+
+            stopwatch.Reset();
+
+            Console.WriteLine("Finished");
+            Console.ReadLine();
+        }
+    }
+}

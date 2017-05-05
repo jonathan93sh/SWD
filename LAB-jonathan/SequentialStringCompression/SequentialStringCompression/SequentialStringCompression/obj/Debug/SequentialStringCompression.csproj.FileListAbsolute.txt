@@ -1,0 +1,6 @@
+C:\git\SWD\LAB-jonathan\SequentialStringCompression\SequentialStringCompression\SequentialStringCompression\bin\Debug\SequentialStringCompression.exe.config
+C:\git\SWD\LAB-jonathan\SequentialStringCompression\SequentialStringCompression\SequentialStringCompression\bin\Debug\SequentialStringCompression.exe
+C:\git\SWD\LAB-jonathan\SequentialStringCompression\SequentialStringCompression\SequentialStringCompression\bin\Debug\SequentialStringCompression.pdb
+C:\git\SWD\LAB-jonathan\SequentialStringCompression\SequentialStringCompression\SequentialStringCompression\obj\Debug\SequentialStringCompression.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB-jonathan\SequentialStringCompression\SequentialStringCompression\SequentialStringCompression\obj\Debug\SequentialStringCompression.exe
+C:\git\SWD\LAB-jonathan\SequentialStringCompression\SequentialStringCompression\SequentialStringCompression\obj\Debug\SequentialStringCompression.pdb

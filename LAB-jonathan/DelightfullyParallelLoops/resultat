@@ -1,0 +1,5 @@
+seq 177
+
+par loop (initial impl) 262
+par loop for 174
+par loop foreach 208

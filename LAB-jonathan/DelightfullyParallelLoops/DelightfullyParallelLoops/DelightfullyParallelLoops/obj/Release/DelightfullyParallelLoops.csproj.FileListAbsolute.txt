@@ -1,0 +1,5 @@
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\bin\Release\DelightfullyParallelLoops.exe.config
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\bin\Release\DelightfullyParallelLoops.exe
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\bin\Release\DelightfullyParallelLoops.pdb
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\obj\Release\DelightfullyParallelLoops.exe
+C:\git\SWD\LAB-jonathan\DelightfullyParallelLoops\DelightfullyParallelLoops\DelightfullyParallelLoops\obj\Release\DelightfullyParallelLoops.pdb

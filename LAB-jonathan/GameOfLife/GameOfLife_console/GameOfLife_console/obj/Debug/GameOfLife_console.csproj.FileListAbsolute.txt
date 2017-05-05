@@ -1,0 +1,6 @@
+C:\git\SWD\LAB-jonathan\GameOfLife\GameOfLife_console\GameOfLife_console\bin\Debug\GameOfLife_console.exe.config
+C:\git\SWD\LAB-jonathan\GameOfLife\GameOfLife_console\GameOfLife_console\obj\Debug\GameOfLife_console.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB-jonathan\GameOfLife\GameOfLife_console\GameOfLife_console\bin\Debug\GameOfLife_console.exe
+C:\git\SWD\LAB-jonathan\GameOfLife\GameOfLife_console\GameOfLife_console\bin\Debug\GameOfLife_console.pdb
+C:\git\SWD\LAB-jonathan\GameOfLife\GameOfLife_console\GameOfLife_console\obj\Debug\GameOfLife_console.exe
+C:\git\SWD\LAB-jonathan\GameOfLife\GameOfLife_console\GameOfLife_console\obj\Debug\GameOfLife_console.pdb

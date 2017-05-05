@@ -1,0 +1,11 @@
+﻿<Window x:Class="SimpleMvvmGameOfLife.Views.GameOfLife"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        Title="GameOfLife" Height="300" Width="300">
+    <Grid>
+        <Image x:Name="ImageGOL" Margin="10" Stretch="UniformToFill"/>
+
+    </Grid>
+</Window>
