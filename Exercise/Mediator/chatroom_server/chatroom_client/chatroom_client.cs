@@ -19,20 +19,31 @@ namespace chatroom_client
             IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
             //IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(remoteIP,(int)port);
+            try
+            {
+                _sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-            _sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                _sender.Connect(remoteEP);
+                Console.WriteLine("Socket connected to {0}",
+                        _sender.RemoteEndPoint.ToString());
 
-            _sender.Connect(remoteEP);
-            Console.WriteLine("Socket connected to {0}",
-                    _sender.RemoteEndPoint.ToString());
-
-            _sender.BeginReceive(buffer, 0, 1000, 0, new AsyncCallback(receiveCallback), this);
+                _sender.BeginReceive(buffer, 0, 1000, 0, new AsyncCallback(receiveCallback), this);
+            }
+            catch (System.Net.Sockets.SocketException e)
+            {
+                close = true;
+                Console.WriteLine("Cant connect to server!");
+            }
+            
         }
 
         public void run()
         {
+
             while(true)
             {
+                if (close)
+                    break;
                 string read = Console.ReadLine();
                 try
                 {
@@ -42,8 +53,7 @@ namespace chatroom_client
                 {
                     break;
                 }
-                if (close)
-                    break;
+                
             }
         }
 

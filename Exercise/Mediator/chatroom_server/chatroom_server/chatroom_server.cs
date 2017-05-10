@@ -57,7 +57,16 @@ namespace chatroom_server
         {
 
             byte[] rawmsg = Encoding.ASCII.GetBytes(msg);
-            _handler.Send(rawmsg);
+            try
+            {
+                _handler.Send(rawmsg);
+            }
+            catch(System.Net.Sockets.SocketException e)
+            {
+                Console.WriteLine("can't send msg to client!!!");
+                close = true;
+            }
+            
         }
 
         public void broadcastMsg(string msg)
@@ -72,7 +81,6 @@ namespace chatroom_server
 
         ConcreteMediator_ThreadSafe<string> _chatroomHandler = new ConcreteMediator_ThreadSafe<string>();
 
-        object _locking = new object();
 
         private uint _port; 
         public chatroom_server(uint port)
@@ -86,11 +94,23 @@ namespace chatroom_server
             IPAddress ipAddress = ipHostInfo.AddressList[0];
             IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, (int)_port);
 
-            Socket listener = new Socket(AddressFamily.InterNetwork,
-            SocketType.Stream, ProtocolType.Tcp);
+            
+            Socket listener;
 
-            listener.Bind(localEndPoint);
-            listener.Listen(10);
+            try
+            {
+                listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                listener.Bind(localEndPoint);
+                listener.Listen(10);
+            }
+            catch(SocketException e)
+            {
+                Console.WriteLine(e.ToString());
+                Console.WriteLine("Server Error: server not started!!!");
+                return;
+            }
+
+            
 
             List<Task> clientTasks = new List<Task>();
 
@@ -101,8 +121,20 @@ namespace chatroom_server
             {
                 while(true)
                 {
-                    Socket handler = listener.Accept();
-                    Console.WriteLine("new client connected");
+                    Socket handler;
+                    try
+                    {
+                        handler = listener.Accept();
+                        Console.WriteLine("new client connected");
+                    }
+                    catch(SocketException e)
+                    {
+                        Console.WriteLine(e.ToString());
+                        Console.WriteLine("Server Error: server shutdown!!!");
+                        return;
+                    }
+                     
+                    
                     
                     Task client = new Task(() =>
                     {
@@ -122,7 +154,7 @@ namespace chatroom_server
             });
 
             server.Start();
-            while (true) ;
+            
         }
     }
 }

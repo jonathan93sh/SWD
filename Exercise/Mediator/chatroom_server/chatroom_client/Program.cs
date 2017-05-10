@@ -14,10 +14,15 @@ namespace chatroom_client
 
             byte[] ipraw = new byte[4];
 
+
             if(args.Length == 1 && args[0].Split('.').Length == 4)
             {
                 for (var i = 0; i < 4; i++ )
+                {
                     ipraw[i] = (byte)int.Parse(args[0].Split('.')[i]);
+                }
+                    
+
             }
             else
             {
