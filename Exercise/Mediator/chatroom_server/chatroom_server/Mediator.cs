@@ -50,4 +50,45 @@ namespace Mediator
             _colleagues.Remove(Colleague);
         }
     }
+
+    class ConcreteMediator_ThreadSafe<T> : IMediator<T>
+    {
+        private List<IColleague<T>> _colleagues = new List<IColleague<T>>();
+        private object _lockObj = new object();
+        public ConcreteMediator_ThreadSafe()
+        {
+        }
+
+        public void broadcastMsg(IColleague<T> from, T msg)
+        {
+            lock (_lockObj)
+            {
+                foreach (IColleague<T> c in _colleagues)
+                {
+                    if (c != from || from == null)
+                    {
+                        c.receiveMsg(msg);
+                    }
+                }
+            }
+        }
+
+        public void register(IColleague<T> newColleague)
+        {
+            lock (_lockObj)
+            {
+                _colleagues.Add(newColleague);
+            }
+            
+        }
+
+
+        public void unregister(IColleague<T> Colleague)
+        {
+            lock (_lockObj)
+            {
+                _colleagues.Remove(Colleague);
+            }
+        }
+    }
 }

@@ -12,6 +12,8 @@ namespace chatroom_client
     {
         Socket _sender;
 
+        byte[] buffer = new byte[1000];
+        private bool close = false;
         public chatroom_client(IPAddress remoteIP, uint port)
         {
             IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
@@ -22,10 +24,58 @@ namespace chatroom_client
 
             _sender.Connect(remoteEP);
             Console.WriteLine("Socket connected to {0}",
-                    _sender.RemoteEndPoint.ToString()); 
+                    _sender.RemoteEndPoint.ToString());
+
+            _sender.BeginReceive(buffer, 0, 1000, 0, new AsyncCallback(receiveCallback), this);
         }
 
+        public void run()
+        {
+            while(true)
+            {
+                string read = Console.ReadLine();
+                try
+                {
+                    _sender.Send(Encoding.ASCII.GetBytes(read));
+                }
+                catch (System.Net.Sockets.SocketException e)
+                {
+                    break;
+                }
+                if (close)
+                    break;
+            }
+        }
 
+        private static void receiveCallback(IAsyncResult ar)
+        {
+            chatroom_client client = (chatroom_client)ar.AsyncState;
 
+            try
+            {
+                if(client._sender == null)
+                {
+                    client.close = true;
+                    Console.WriteLine("server shutdown");
+                    return;
+                }
+
+                int rec = client._sender.EndReceive(ar);
+
+                string str = Encoding.ASCII.GetString(client.buffer, 0, rec);
+
+                Console.WriteLine("Received: " + str);
+
+                client._sender.BeginReceive(client.buffer, 0, 1000, 0, new AsyncCallback(receiveCallback), client);
+            }
+            catch(System.Net.Sockets.SocketException e)
+            {
+                client._sender.Disconnect(true);
+                client.close = true;
+                Console.WriteLine("server shutdown");
+            }
+            
+
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace chatroom_server
 
     class chatroom_client: IColleague<string>
     {
+        public bool close = false;
         Socket _handler;
         byte[] _buffer = new byte[1000];
         IMediator<string> _chatroomHandler;
@@ -23,26 +24,32 @@ namespace chatroom_server
             _chatroomHandler.register(this);
         }
 
+
+
         public void run()
         {
 
 
             string msg = null;
             
-            while(true)
-            {
-                int rec = _handler.Receive(_buffer);
 
-                msg += Encoding.ASCII.GetString(_buffer, 0, rec);
-
-                if(msg.IndexOf("<EOF>") > -1)
+                try
                 {
-                    break;
+                    int rec = _handler.Receive(_buffer);
+                    msg += Encoding.ASCII.GetString(_buffer, 0, rec);
+                    broadcastMsg(msg);
+                }
+                catch(System.Net.Sockets.SocketException e)
+                {
+                    Console.WriteLine("client exit");
+                    _chatroomHandler.unregister(this);
+                    close = true;
+                    
                 }
 
-            }
 
-            broadcastMsg(msg);
+
+            
 
         }
 
@@ -63,7 +70,7 @@ namespace chatroom_server
     class chatroom_server
     {
 
-        ConcreteMediator<string> _chatroomHandler = new ConcreteMediator<string>();
+        ConcreteMediator_ThreadSafe<string> _chatroomHandler = new ConcreteMediator_ThreadSafe<string>();
 
         object _locking = new object();
 
@@ -77,15 +84,18 @@ namespace chatroom_server
         {
             IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
             IPAddress ipAddress = ipHostInfo.AddressList[0];
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
+            IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, (int)_port);
 
             Socket listener = new Socket(AddressFamily.InterNetwork,
             SocketType.Stream, ProtocolType.Tcp);
 
             listener.Bind(localEndPoint);
-            listener.Listen(20);
+            listener.Listen(10);
 
             List<Task> clientTasks = new List<Task>();
+
+            //Socket handler = listener.Accept();
+            //Console.WriteLine("new client connected");
 
             Task server = new Task(() =>
             {
@@ -101,6 +111,8 @@ namespace chatroom_server
                         while(true)
                         {
                             ClientHandler.run();
+                            if (ClientHandler.close)
+                                break;
                         }
 
                     });
@@ -110,7 +122,7 @@ namespace chatroom_server
             });
 
             server.Start();
-            
+            while (true) ;
         }
     }
 }
