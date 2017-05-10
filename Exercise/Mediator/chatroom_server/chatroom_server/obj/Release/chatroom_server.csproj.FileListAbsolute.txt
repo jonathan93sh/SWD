@@ -1,0 +1,5 @@
+C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\bin\Release\chatroom_server.exe.config
+C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\bin\Release\chatroom_server.exe
+C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\bin\Release\chatroom_server.pdb
+C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\obj\Release\chatroom_server.exe
+C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\obj\Release\chatroom_server.pdb
