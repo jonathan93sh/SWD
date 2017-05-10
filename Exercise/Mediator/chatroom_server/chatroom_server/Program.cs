@@ -12,8 +12,10 @@ namespace chatroom_server
     {
         static void Main(string[] args)
         {
+            // opretter server.
             var chatserver = new chatroom_server(3000u);
 
+            // starter server.
             chatserver.startServer();
 
             while (true) { }

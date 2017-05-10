@@ -35,9 +35,8 @@ namespace chatroom_client
             
 
             IPAddress remote = new IPAddress(ipraw);
-
+            // opretter klient og forbinder sig til serveren.
             var client = new chatroom_client(remote, 3000u);
-
             client.run();
 
         }
