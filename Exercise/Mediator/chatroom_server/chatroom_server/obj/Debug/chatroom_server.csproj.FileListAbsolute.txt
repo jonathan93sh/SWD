@@ -1,6 +1,0 @@
-C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\bin\Debug\chatroom_server.exe.config
-C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\bin\Debug\chatroom_server.exe
-C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\bin\Debug\chatroom_server.pdb
-C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\obj\Debug\chatroom_server.csprojResolveAssemblyReference.cache
-C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\obj\Debug\chatroom_server.exe
-C:\git\SWD\Exercise\Mediator\chatroom_server\chatroom_server\obj\Debug\chatroom_server.pdb

@@ -1,0 +1,15 @@
+C:\git\SWD\Exercise\Mediator\Mediator\bin\Debug\Mediator.exe.config
+C:\git\SWD\Exercise\Mediator\Mediator\obj\Debug\Mediator.csprojResolveAssemblyReference.cache
+C:\git\SWD\Exercise\Mediator\Mediator\bin\Debug\Mediator.exe
+C:\git\SWD\Exercise\Mediator\Mediator\bin\Debug\Mediator.pdb
+C:\git\SWD\Exercise\Mediator\Mediator\obj\Debug\Mediator.exe
+C:\git\SWD\Exercise\Mediator\Mediator\obj\Debug\Mediator.pdb
+C:\SWD\Exercise\Mediator\Mediator\bin\Debug\Mediator.exe.config
+C:\SWD\Exercise\Mediator\Mediator\obj\Debug\Mediator.pdb
+C:\SWD\Exercise\Mediator\Mediator\bin\Debug\Mediator.exe
+C:\SWD\Exercise\Mediator\Mediator\bin\Debug\Mediator.pdb
+C:\SWD\Exercise\Mediator\Mediator\obj\Debug\Mediator.csprojResolveAssemblyReference.cache
+C:\SWD\Exercise\Mediator\Mediator\obj\Debug\Mediator.exe
+C:\SWD\Exercise\Mediator\First example - Mediator\Mediator\bin\Debug\Mediator.exe.config
+C:\SWD\Exercise\Mediator\First example - Mediator\Mediator\obj\Debug\Mediator.exe
+C:\SWD\Exercise\Mediator\First example - Mediator\Mediator\obj\Debug\Mediator.pdb
