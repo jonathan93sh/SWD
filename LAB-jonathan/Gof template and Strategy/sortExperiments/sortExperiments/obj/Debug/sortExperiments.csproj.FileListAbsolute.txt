@@ -1,0 +1,1 @@
+C:\git\SWD\LAB-jonathan\Gof template and Strategy\sortExperiments\sortExperiments\bin\Debug\sortExperiments.exe.config
