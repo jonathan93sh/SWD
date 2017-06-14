@@ -1,1 +1,6 @@
 C:\git\SWD\LAB-jonathan\Gof template and Strategy\sortExperiments\sortExperiments\bin\Debug\sortExperiments.exe.config
+C:\git\SWD\LAB-jonathan\Gof template and Strategy\sortExperiments\sortExperiments\obj\Debug\sortExperiments.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB-jonathan\Gof template and Strategy\sortExperiments\sortExperiments\bin\Debug\sortExperiments.exe
+C:\git\SWD\LAB-jonathan\Gof template and Strategy\sortExperiments\sortExperiments\bin\Debug\sortExperiments.pdb
+C:\git\SWD\LAB-jonathan\Gof template and Strategy\sortExperiments\sortExperiments\obj\Debug\sortExperiments.exe
+C:\git\SWD\LAB-jonathan\Gof template and Strategy\sortExperiments\sortExperiments\obj\Debug\sortExperiments.pdb
