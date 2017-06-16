@@ -10,21 +10,15 @@ namespace sortExperiments
     {
         static void Main(string[] args)
         {
-            List<IGenerator> generators = new List<IGenerator>();
-            List<ISortAlgorithms> algorithms = new List<ISortAlgorithms>();
+            ExperimentCreator completeExperimentFactory = new CompleteExperimentCreator();
+            ExperimentCreator bubbleExperFact = new BubbleExperimentCreator();
 
-            generators.Add(new RandomGenerator((int)DateTime.Now.Ticks));
-            generators.Add(new nearlySortedGenerator(95, (int)DateTime.Now.Ticks));
-            generators.Add(new ReverseOrderGenerator());
-            generators.Add(new FewUniqueRandomOrderGenerator((int)DateTime.Now.Ticks, 5));
-            algorithms.Add(new BubbleSort());
-            algorithms.Add(new InsertionSort());
-            algorithms.Add(new ShellSort());
-            algorithms.Add(new QuickSort());
+            IExperiment completeExper = completeExperimentFactory.FactoryMethode();
+            IExperiment bubbleExper = bubbleExperFact.FactoryMethode();
 
-            Experiment allTest = new Experiment(generators, algorithms, 10000, "The Test");
+            completeExper.start();
 
-            allTest.start();
+            bubbleExper.start();
 
             Console.ReadLine();
 

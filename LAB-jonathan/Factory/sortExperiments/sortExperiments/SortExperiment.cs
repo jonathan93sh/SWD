@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace sortExperiments
 {
+    interface IExperiment
+    {
+        void start();
+    }
 
-    abstract class sortExperiment
+    abstract class sortExperiment : IExperiment
     {
         protected List<ISortAlgorithms> _Algoritmes;
         protected List<IGenerator> _Generators;

@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6dfc2685-cdef-4785-9ed2-d68c8d92aad0" name="callSeqGoFState" linkedPackageId="3d070e22-5152-497b-8621-fdc153ed2e38" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c369cbe8-496b-4aef-acd3-3e660053f0b7">
+      <profileInstance Id="e8104cc9-a547-4ec9-9f06-1042139ac933" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ee4ec768-1781-47fa-a0f6-62f324748993">
+      <profileInstance Id="80f7ed89-195f-4a5f-91c4-90cdd76bde5e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="fa8b8000-2083-43a1-8a53-f2d108be4d12" name="callSeqGoFState" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="6205c608-b13c-41e4-8295-fdf7f53ccc66" />
+        <fragments>
+          <behaviorExecutionSpecification Id="4998e6e5-f364-473b-87ca-6b5ae77fe19f" name="BehaviorExecutionSpecification3">
+            <elementDefinition Id="01f6383e-cd36-4c0c-b6af-13f4dc9b4a47" />
+            <coveredLifelines>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="85bc0150-8618-477b-be32-19af49406f5c" LastKnownName="ExecutionOccurrenceSpecification6" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="8e3647a0-71c9-4bc7-b4ee-0d5a8c53a660" LastKnownName="ExecutionOccurrenceSpecification5" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="62a09e1b-aede-4865-988a-5d09d44609d8" LastKnownName="MessageOccurrenceSpecification6" />
+              <messageOccurrenceSpecificationMoniker Id="f835d862-5826-480b-a0e3-7a9c3de781c0" LastKnownName="MessageOccurrenceSpecification7" />
+              <executionOccurrenceSpecificationMoniker Id="02e13234-6769-4eae-b26f-4259fe4f6e9f" LastKnownName="ExecutionOccurrenceSpecification9" />
+              <executionOccurrenceSpecificationMoniker Id="fe591cb2-60c8-4de3-b0a5-002f87025646" LastKnownName="ExecutionOccurrenceSpecification10" />
+              <executionOccurrenceSpecificationMoniker Id="2f3d4682-056f-456b-9d8d-89c99f55b5eb" LastKnownName="ExecutionOccurrenceSpecification11" />
+              <executionOccurrenceSpecificationMoniker Id="abfea797-e25c-4891-88b2-08ff8fecba0a" LastKnownName="ExecutionOccurrenceSpecification12" />
+              <messageOccurrenceSpecificationMoniker Id="1f2d5400-2be5-4b08-b2ff-e97ce0ef0c5b" LastKnownName="MessageOccurrenceSpecification10" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="8e3647a0-71c9-4bc7-b4ee-0d5a8c53a660" name="ExecutionOccurrenceSpecification5">
+            <elementDefinition Id="36af365d-cec1-42b1-9dc5-ddd5be4563c1" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="0ef66e76-e25c-4086-82cb-481c1e46fb25" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="7d4aa83a-195c-40ab-8a9c-fd19e41e980d" name="MessageOccurrenceSpecification5">
+            <elementDefinition Id="2515df4f-c3d2-4956-b0b8-39de0cdeabf2" />
+            <covered>
+              <lifelineMoniker Id="f40fd2d6-3738-4e50-b617-098a9f52bb47" LastKnownName="user" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="62a09e1b-aede-4865-988a-5d09d44609d8" name="MessageOccurrenceSpecification6">
+            <elementDefinition Id="0e696550-1113-469a-9be3-1158854f047a" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="52ba7c25-69c1-411a-a87e-fbce50867b63" name="BehaviorExecutionSpecification4">
+            <elementDefinition Id="8d7c076a-5554-401a-80ec-2645b6de564d" />
+            <coveredLifelines>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="024604dd-ffdf-4ddc-947f-8a46b81596f0" LastKnownName="ExecutionOccurrenceSpecification8" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="c82b725b-1c5b-4253-b95b-05a2e0c019c1" LastKnownName="ExecutionOccurrenceSpecification7" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="22605b51-5f8c-477f-8a63-4280b43f0542" LastKnownName="MessageOccurrenceSpecification8" />
+              <messageOccurrenceSpecificationMoniker Id="2d437e7f-da7e-46e3-8dc9-76d2146a2098" LastKnownName="MessageOccurrenceSpecification11" />
+              <messageOccurrenceSpecificationMoniker Id="c866376f-d20e-4086-9d7a-0d46510820a7" LastKnownName="MessageOccurrenceSpecification14" />
+              <messageOccurrenceSpecificationMoniker Id="0bfbf1a9-c714-4fca-8213-932688171cc4" LastKnownName="MessageOccurrenceSpecification15" />
+              <messageOccurrenceSpecificationMoniker Id="8fa24556-d4c4-4438-b486-a164e588ff60" LastKnownName="MessageOccurrenceSpecification18" />
+              <messageOccurrenceSpecificationMoniker Id="16a0cd68-7823-4cfc-a4d1-cf76503c7b36" LastKnownName="MessageOccurrenceSpecification9" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="c82b725b-1c5b-4253-b95b-05a2e0c019c1" name="ExecutionOccurrenceSpecification7">
+            <elementDefinition Id="9ce0c8f9-f377-410c-b0ac-2c2f654e89ba" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="58549d61-3303-4244-95e3-61c88a5dd3ea" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f835d862-5826-480b-a0e3-7a9c3de781c0" name="MessageOccurrenceSpecification7">
+            <elementDefinition Id="aca43e66-9c84-4852-a81b-774eb29f6e2f" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="22605b51-5f8c-477f-8a63-4280b43f0542" name="MessageOccurrenceSpecification8">
+            <elementDefinition Id="990c006e-4109-424e-be29-9caddfe7d22a" />
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="b98ce552-2d03-4a46-b6a9-b5019bd0b6d1" name="BehaviorExecutionSpecification5">
+            <elementDefinition Id="28746616-4aef-4873-901b-a311914fbbc7" />
+            <coveredLifelines>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="fe591cb2-60c8-4de3-b0a5-002f87025646" LastKnownName="ExecutionOccurrenceSpecification10" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="02e13234-6769-4eae-b26f-4259fe4f6e9f" LastKnownName="ExecutionOccurrenceSpecification9" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="935c5caf-22ad-4428-bc0f-d2a5ba1b665d" LastKnownName="MessageOccurrenceSpecification12" />
+              <messageOccurrenceSpecificationMoniker Id="bdd07a6e-0f98-4469-948f-d9c10daa235e" LastKnownName="MessageOccurrenceSpecification19" />
+              <messageOccurrenceSpecificationMoniker Id="896abfa0-c41e-49f5-afea-7338ea105092" LastKnownName="MessageOccurrenceSpecification22" />
+              <messageOccurrenceSpecificationMoniker Id="478bb578-8b78-41f2-af60-b9d15b7a8e05" LastKnownName="MessageOccurrenceSpecification13" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="02e13234-6769-4eae-b26f-4259fe4f6e9f" name="ExecutionOccurrenceSpecification9">
+            <elementDefinition Id="37426e0c-412c-40c8-998b-9ae4bb6e7ac6" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="17dc24c3-e119-40fb-b296-fbe1eb515d80" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="935c5caf-22ad-4428-bc0f-d2a5ba1b665d" name="MessageOccurrenceSpecification12">
+            <elementDefinition Id="b411a41a-92d8-456d-998a-ee6e3d92b5f7" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2d437e7f-da7e-46e3-8dc9-76d2146a2098" name="MessageOccurrenceSpecification11">
+            <elementDefinition Id="d9f4da82-4d23-424a-8773-309f0502b916" />
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="6634adb8-6217-4069-8639-f7937bf4da19" name="BehaviorExecutionSpecification7">
+            <elementDefinition Id="b144c93d-5319-4040-bc51-09a21264b51b" />
+            <coveredLifelines>
+              <lifelineMoniker Id="1975b44c-7903-4e40-a0a2-bfcee62a5928" LastKnownName="FlashlightController" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="1a450bf9-23a5-477a-8f6a-07ab41f523c1" LastKnownName="ExecutionOccurrenceSpecification14" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="957cb6fa-b2ea-45f9-8da1-e8edfed5b665" LastKnownName="ExecutionOccurrenceSpecification13" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="ed781294-bc64-4dc1-b37f-8ff2fd071106" LastKnownName="MessageOccurrenceSpecification20" />
+              <messageOccurrenceSpecificationMoniker Id="43388de1-3e40-4919-87c2-c93549eaded1" LastKnownName="MessageOccurrenceSpecification21" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="957cb6fa-b2ea-45f9-8da1-e8edfed5b665" name="ExecutionOccurrenceSpecification13">
+            <elementDefinition Id="083f39ef-f5d6-4567-afa6-ec3c8ee551da" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="993adea4-868c-4801-af72-35a7eaae8c29" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="1975b44c-7903-4e40-a0a2-bfcee62a5928" LastKnownName="FlashlightController" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ed781294-bc64-4dc1-b37f-8ff2fd071106" name="MessageOccurrenceSpecification20">
+            <elementDefinition Id="b87ae7d6-dc97-469d-ae97-7c5332295eca" />
+            <covered>
+              <lifelineMoniker Id="1975b44c-7903-4e40-a0a2-bfcee62a5928" LastKnownName="FlashlightController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="bdd07a6e-0f98-4469-948f-d9c10daa235e" name="MessageOccurrenceSpecification19">
+            <elementDefinition Id="7d73b701-8582-4bdb-ae55-719769e81a21" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="896abfa0-c41e-49f5-afea-7338ea105092" name="MessageOccurrenceSpecification22">
+            <elementDefinition Id="69187143-45e9-48d4-9ceb-4c77d21640dd" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="43388de1-3e40-4919-87c2-c93549eaded1" name="MessageOccurrenceSpecification21">
+            <elementDefinition Id="a11fd405-17e9-47fc-939c-d0c2fe0c3b17" />
+            <covered>
+              <lifelineMoniker Id="1975b44c-7903-4e40-a0a2-bfcee62a5928" LastKnownName="FlashlightController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="1a450bf9-23a5-477a-8f6a-07ab41f523c1" name="ExecutionOccurrenceSpecification14">
+            <elementDefinition Id="cbafae1c-4d1d-4fd7-8fc3-c48c249fedf8" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="129d89e3-382c-4bf9-878c-b65feb440f39" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="1975b44c-7903-4e40-a0a2-bfcee62a5928" LastKnownName="FlashlightController" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="c866376f-d20e-4086-9d7a-0d46510820a7" name="MessageOccurrenceSpecification14">
+            <elementDefinition Id="a809f137-c8f8-4f4a-9e83-a31994767ea4" />
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="478bb578-8b78-41f2-af60-b9d15b7a8e05" name="MessageOccurrenceSpecification13">
+            <elementDefinition Id="ce381c15-876d-4b79-887e-cf04e3f02408" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="fe591cb2-60c8-4de3-b0a5-002f87025646" name="ExecutionOccurrenceSpecification10">
+            <elementDefinition Id="47bd9ce7-9c12-47be-95c8-00fcf8c879be" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="2c74d848-be61-4ae7-8980-3d52d423c2c0" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="0749f840-e61f-4019-b8c9-ef2ef52757e5" name="BehaviorExecutionSpecification6">
+            <elementDefinition Id="5de275db-a412-4d53-9cef-faf1f328e058" />
+            <coveredLifelines>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="abfea797-e25c-4891-88b2-08ff8fecba0a" LastKnownName="ExecutionOccurrenceSpecification12" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="2f3d4682-056f-456b-9d8d-89c99f55b5eb" LastKnownName="ExecutionOccurrenceSpecification11" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="e53e9f0e-26ab-45d9-8a2c-8fc8a6f4be9a" LastKnownName="MessageOccurrenceSpecification16" />
+              <messageOccurrenceSpecificationMoniker Id="252dc588-0593-4a46-a038-9ddf531464a1" LastKnownName="MessageOccurrenceSpecification17" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="2f3d4682-056f-456b-9d8d-89c99f55b5eb" name="ExecutionOccurrenceSpecification11">
+            <elementDefinition Id="4da14fa7-0dc3-4dcb-8e3e-e02056fcae5a" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="e2a82056-771d-45f1-be0f-5a59642431fc" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="0bfbf1a9-c714-4fca-8213-932688171cc4" name="MessageOccurrenceSpecification15">
+            <elementDefinition Id="2d688532-1e6c-4719-96c0-6ef10745554f" />
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e53e9f0e-26ab-45d9-8a2c-8fc8a6f4be9a" name="MessageOccurrenceSpecification16">
+            <elementDefinition Id="84139f69-bc0b-4f56-950a-e87c27d664d6" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="252dc588-0593-4a46-a038-9ddf531464a1" name="MessageOccurrenceSpecification17">
+            <elementDefinition Id="060c1927-e294-4b49-b61d-fbede5e0f506" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8fa24556-d4c4-4438-b486-a164e588ff60" name="MessageOccurrenceSpecification18">
+            <elementDefinition Id="b690ace8-94da-4784-9456-fdc7c29ea0ae" />
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="abfea797-e25c-4891-88b2-08ff8fecba0a" name="ExecutionOccurrenceSpecification12">
+            <elementDefinition Id="c55aa30e-f61e-4150-aca9-31cdf03e0212" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="7f00f962-b6e8-4a1f-b70b-3538d65bf519" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="16a0cd68-7823-4cfc-a4d1-cf76503c7b36" name="MessageOccurrenceSpecification9">
+            <elementDefinition Id="20802bcf-7d72-4e18-a6ac-dd827c38d337" />
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1f2d5400-2be5-4b08-b2ff-e97ce0ef0c5b" name="MessageOccurrenceSpecification10">
+            <elementDefinition Id="4211a444-5b0c-4f24-bfd6-8dbc83054cd3" />
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="024604dd-ffdf-4ddc-947f-8a46b81596f0" name="ExecutionOccurrenceSpecification8">
+            <elementDefinition Id="9eca9b64-32ed-4104-b4eb-c34ebe684a1f" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="73aeaad9-adda-4351-a454-a7d58b653a03" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="221a3839-8502-437e-8535-91cc5e689564" LastKnownName="OFF : FlashligthState" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="85bc0150-8618-477b-be32-19af49406f5c" name="ExecutionOccurrenceSpecification6">
+            <elementDefinition Id="6e6fecc1-9de5-4985-b342-e0944bcb8429" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="95ca9c63-f8e6-44fa-a53b-0dd5b6c00ca1" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" LastKnownName="Flashlight" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="f40fd2d6-3738-4e50-b617-098a9f52bb47" name="user" isActor="false" lifelineDisplayName="user">
+            <elementDefinition Id="ba2f3e43-b27a-4e64-bda7-8f0518a750d5" />
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="7d4aa83a-195c-40ab-8a9c-fd19e41e980d" LastKnownName="MessageOccurrenceSpecification5" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="71ac9717-90b9-46e3-a32d-76ab6fa84643" name="Flashlight" isActor="false" lifelineDisplayName="Flashlight">
+            <elementDefinition Id="a1b4109c-3830-4b73-8d98-264747cfce06" />
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="8e3647a0-71c9-4bc7-b4ee-0d5a8c53a660" LastKnownName="ExecutionOccurrenceSpecification5" />
+              <executionOccurrenceSpecificationMoniker Id="85bc0150-8618-477b-be32-19af49406f5c" LastKnownName="ExecutionOccurrenceSpecification6" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="1975b44c-7903-4e40-a0a2-bfcee62a5928" name="FlashlightController" isActor="false" lifelineDisplayName="FlashlightController">
+            <elementDefinition Id="09adc444-52e4-46a8-80dd-415afce8df8f" />
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="957cb6fa-b2ea-45f9-8da1-e8edfed5b665" LastKnownName="ExecutionOccurrenceSpecification13" />
+              <executionOccurrenceSpecificationMoniker Id="1a450bf9-23a5-477a-8f6a-07ab41f523c1" LastKnownName="ExecutionOccurrenceSpecification14" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="3abe9a76-9a7f-4789-a9d7-3dd704d977c2" name="ON : FlashligthState" isActor="false" lifelineDisplayName="ON : FlashligthState">
+            <elementDefinition Id="8f2a5749-0791-4b18-8aac-29959ec83ace" />
+          </lifeline>
+          <lifeline Id="221a3839-8502-437e-8535-91cc5e689564" name="OFF : FlashligthState" isActor="false" lifelineDisplayName="OFF : FlashligthState">
+            <elementDefinition Id="87513246-e8ca-4318-b80c-254c1a712e49" />
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="c82b725b-1c5b-4253-b95b-05a2e0c019c1" LastKnownName="ExecutionOccurrenceSpecification7" />
+              <executionOccurrenceSpecificationMoniker Id="024604dd-ffdf-4ddc-947f-8a46b81596f0" LastKnownName="ExecutionOccurrenceSpecification8" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="77ac7fc2-f00c-4add-9625-82496db30c35" name="Power()" messageKind="Complete" messageSort="AsynchCall" createSelfMessage="false">
+            <elementDefinition Id="6d70a19b-4a5e-4378-aade-b525369d379c" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="7d4aa83a-195c-40ab-8a9c-fd19e41e980d" LastKnownName="MessageOccurrenceSpecification5" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="62a09e1b-aede-4865-988a-5d09d44609d8" LastKnownName="MessageOccurrenceSpecification6" />
+            </receiveEvent>
+          </message>
+          <message Id="9d8ae864-f705-4b31-81cf-c6fc32692bf6" name="HandlePower(this)" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+            <elementDefinition Id="277dc8a2-c2a4-4f10-a3e3-0c0357a4aa34" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="f835d862-5826-480b-a0e3-7a9c3de781c0" LastKnownName="MessageOccurrenceSpecification7" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="22605b51-5f8c-477f-8a63-4280b43f0542" LastKnownName="MessageOccurrenceSpecification8" />
+            </receiveEvent>
+          </message>
+          <message Id="fc0ba4d9-907a-40df-9b1f-edf5341f3a0d" name="LightON()" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+            <elementDefinition Id="9fc708bb-f86c-4b1d-8455-1175656b4f82" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="2d437e7f-da7e-46e3-8dc9-76d2146a2098" LastKnownName="MessageOccurrenceSpecification11" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="935c5caf-22ad-4428-bc0f-d2a5ba1b665d" LastKnownName="MessageOccurrenceSpecification12" />
+            </receiveEvent>
+          </message>
+          <message Id="d7352826-edb9-4e02-a978-b9f6495c0b78" name="LightON()" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+            <elementDefinition Id="f75b72ed-0512-4c11-af17-2bd60b155cd8" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="bdd07a6e-0f98-4469-948f-d9c10daa235e" LastKnownName="MessageOccurrenceSpecification19" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="ed781294-bc64-4dc1-b37f-8ff2fd071106" LastKnownName="MessageOccurrenceSpecification20" />
+            </receiveEvent>
+          </message>
+          <message Id="f5bd762b-d033-4b88-a04f-64471a58221d" name="void" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="eccbed5d-6d04-4067-af8a-a5b818dfec08" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="43388de1-3e40-4919-87c2-c93549eaded1" LastKnownName="MessageOccurrenceSpecification21" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="896abfa0-c41e-49f5-afea-7338ea105092" LastKnownName="MessageOccurrenceSpecification22" />
+            </receiveEvent>
+          </message>
+          <message Id="e1e75b6a-0123-41b1-b7fd-14e434d7caa9" name="void" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="24efdec2-4a03-40d8-b4b2-ca9d7323e0b7" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="478bb578-8b78-41f2-af60-b9d15b7a8e05" LastKnownName="MessageOccurrenceSpecification13" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="c866376f-d20e-4086-9d7a-0d46510820a7" LastKnownName="MessageOccurrenceSpecification14" />
+            </receiveEvent>
+          </message>
+          <message Id="070a76c9-f8d0-4698-b720-d72243e92986" name="SetState(Flashligth.sON)" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false">
+            <elementDefinition Id="792f4f3d-3bad-4cc5-8734-3d279dfb0a5e" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="0bfbf1a9-c714-4fca-8213-932688171cc4" LastKnownName="MessageOccurrenceSpecification15" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="e53e9f0e-26ab-45d9-8a2c-8fc8a6f4be9a" LastKnownName="MessageOccurrenceSpecification16" />
+            </receiveEvent>
+          </message>
+          <message Id="e95b6edc-8a9d-4279-871d-66e9ab480dbf" name="void" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="1e7e56f1-ef11-4d28-b014-1248c2b7056f" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="252dc588-0593-4a46-a038-9ddf531464a1" LastKnownName="MessageOccurrenceSpecification17" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="8fa24556-d4c4-4438-b486-a164e588ff60" LastKnownName="MessageOccurrenceSpecification18" />
+            </receiveEvent>
+          </message>
+          <message Id="7747f266-66b3-49f4-951c-146e22ad14f5" name="void" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <elementDefinition Id="93d9c48e-1263-4dda-babb-8493631472fb" />
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="16a0cd68-7823-4cfc-a4d1-cf76503c7b36" LastKnownName="MessageOccurrenceSpecification9" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="1f2d5400-2be5-4b08-b2ff-e97ce0ef0c5b" LastKnownName="MessageOccurrenceSpecification10" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="0ef66e76-e25c-4086-82cb-481c1e46fb25" name="ExecutionEvent">
+        <elementDefinition Id="f45d5c42-f158-44fd-9303-b9078129cc7a" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="95ca9c63-f8e6-44fa-a53b-0dd5b6c00ca1" name="ExecutionEvent">
+        <elementDefinition Id="5dea97e8-29ac-4b81-abe3-fed05a3d33f1" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="58549d61-3303-4244-95e3-61c88a5dd3ea" name="ExecutionEvent">
+        <elementDefinition Id="b7def0bf-a4cc-4385-a2c4-40af5537acf5" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="73aeaad9-adda-4351-a454-a7d58b653a03" name="ExecutionEvent">
+        <elementDefinition Id="23a82f9e-1f53-4c15-aba6-c14279b9c53f" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="17dc24c3-e119-40fb-b296-fbe1eb515d80" name="ExecutionEvent">
+        <elementDefinition Id="423218ef-3e9c-4b9e-a660-3f9bb2877bc4" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="2c74d848-be61-4ae7-8980-3d52d423c2c0" name="ExecutionEvent">
+        <elementDefinition Id="4a836a58-82d7-4fce-a15e-4cdcdacce82d" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="e2a82056-771d-45f1-be0f-5a59642431fc" name="ExecutionEvent">
+        <elementDefinition Id="8270d928-2fbd-41fd-aaf7-825f5b157ff1" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="7f00f962-b6e8-4a1f-b70b-3538d65bf519" name="ExecutionEvent">
+        <elementDefinition Id="5f439645-46b9-4335-b448-add7e10381a3" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="993adea4-868c-4801-af72-35a7eaae8c29" name="ExecutionEvent">
+        <elementDefinition Id="911549d4-6385-48ec-b1e9-daa786b3b2bf" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="129d89e3-382c-4bf9-878c-b65feb440f39" name="ExecutionEvent">
+        <elementDefinition Id="924f5b61-5d80-475e-8679-9d134f2c12c1" />
+      </executionEvent>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="3d070e22-5152-497b-8621-fdc153ed2e38" name="GoF_State">
+    <elementDefinition Id="82682d8b-9746-4975-b263-9353c12f7d8e" />
+  </package>
+</SequenceDesignerModel>

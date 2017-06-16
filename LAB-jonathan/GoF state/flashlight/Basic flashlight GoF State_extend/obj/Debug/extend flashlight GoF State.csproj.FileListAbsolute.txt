@@ -1,0 +1,5 @@
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State_extend\bin\Debug\Basic flashlight GoF State.exe.config
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State_extend\obj\Debug\Basic flashlight GoF State.exe
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State_extend\obj\Debug\Basic flashlight GoF State.pdb
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State_extend\bin\Debug\Basic flashlight GoF State.exe
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State_extend\bin\Debug\Basic flashlight GoF State.pdb

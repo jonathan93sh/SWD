@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic flashlight switch case", "flashlight\Basic flashlight switch case.csproj", "{07F8CDA1-D5A9-4766-B335-430BCB75D6AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic flashlight GoF State", "Basic flashlight GoF State\Basic flashlight GoF State.csproj", "{D69C7A72-6294-4FD9-BF47-B77531842F7D}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "GoF_State", "GoF_State\GoF_State.modelproj", "{E3D034C8-968A-40BB-9C5B-8B904D6BBD83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extend flashlight GoF State", "Basic flashlight GoF State_extend\extend flashlight GoF State.csproj", "{86C38256-B75D-4556-B649-BD0BA5CFA988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extend flashlight switch case", "flashlight_extend\extend flashlight switch case.csproj", "{293796A0-FAAD-41AD-BC7D-979B3356C1EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07F8CDA1-D5A9-4766-B335-430BCB75D6AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F8CDA1-D5A9-4766-B335-430BCB75D6AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F8CDA1-D5A9-4766-B335-430BCB75D6AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F8CDA1-D5A9-4766-B335-430BCB75D6AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D69C7A72-6294-4FD9-BF47-B77531842F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69C7A72-6294-4FD9-BF47-B77531842F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69C7A72-6294-4FD9-BF47-B77531842F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69C7A72-6294-4FD9-BF47-B77531842F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3D034C8-968A-40BB-9C5B-8B904D6BBD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D034C8-968A-40BB-9C5B-8B904D6BBD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3D034C8-968A-40BB-9C5B-8B904D6BBD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D034C8-968A-40BB-9C5B-8B904D6BBD83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C38256-B75D-4556-B649-BD0BA5CFA988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C38256-B75D-4556-B649-BD0BA5CFA988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C38256-B75D-4556-B649-BD0BA5CFA988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C38256-B75D-4556-B649-BD0BA5CFA988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293796A0-FAAD-41AD-BC7D-979B3356C1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293796A0-FAAD-41AD-BC7D-979B3356C1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293796A0-FAAD-41AD-BC7D-979B3356C1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293796A0-FAAD-41AD-BC7D-979B3356C1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight\bin\Debug\flashlight.exe.config
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight\obj\Debug\flashlight.exe
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight\obj\Debug\flashlight.pdb

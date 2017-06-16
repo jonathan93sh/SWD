@@ -1,0 +1,6 @@
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight_extend\bin\Debug\flashlight.exe.config
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight_extend\obj\Debug\flashlight.exe
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight_extend\obj\Debug\flashlight.pdb
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight_extend\bin\Debug\flashlight.exe
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight_extend\bin\Debug\flashlight.pdb
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\flashlight_extend\obj\Debug\extend flashlight switch case.csprojResolveAssemblyReference.cache

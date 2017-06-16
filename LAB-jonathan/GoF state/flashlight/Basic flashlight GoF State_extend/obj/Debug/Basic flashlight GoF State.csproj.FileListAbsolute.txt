@@ -1,0 +1,6 @@
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State\bin\Debug\Basic flashlight GoF State.exe.config
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State\obj\Debug\Basic flashlight GoF State.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State\bin\Debug\Basic flashlight GoF State.exe
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State\bin\Debug\Basic flashlight GoF State.pdb
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State\obj\Debug\Basic flashlight GoF State.exe
+C:\git\SWD\LAB-jonathan\GoF state\flashlight\Basic flashlight GoF State\obj\Debug\Basic flashlight GoF State.pdb
