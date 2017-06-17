@@ -1,0 +1,6 @@
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\MapReduce_example\bin\Debug\MapReduce_example.exe.config
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\MapReduce_example\bin\Debug\MapReduce_example.exe
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\MapReduce_example\bin\Debug\MapReduce_example.pdb
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\MapReduce_example\obj\Debug\MapReduce_example.csprojResolveAssemblyReference.cache
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\MapReduce_example\obj\Debug\MapReduce_example.exe
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\MapReduce_example\obj\Debug\MapReduce_example.pdb
