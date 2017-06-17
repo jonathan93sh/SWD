@@ -1,0 +1,1 @@
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\bin\Release\playingCards.exe.config

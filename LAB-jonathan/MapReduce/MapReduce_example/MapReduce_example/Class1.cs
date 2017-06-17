@@ -59,7 +59,7 @@ namespace MapReduce
         private static void Main(string[] args)
         {
             var files =
-                Directory.EnumerateFiles(@"C:\# OFFLINE WORK\Courses\4\I4SWD\EXERCISES\MapReduce\Books", "*.txt")
+                Directory.EnumerateFiles(@"C:\git\SWD\LAB-jonathan\MapReduce\Books", "*.txt")
                     .AsParallel();
 
             var wordCount = files.MapReduce(
@@ -74,31 +74,32 @@ namespace MapReduce
             {
                 Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
             }
+            Console.ReadLine();
         }
 
         // Source() provides the source data on which the MapReduce query shall run. 
         private static IEnumerable<string> Source(string path)
         {
             return File.ReadLines(path) // Read all lines in the path
-                .SelectMany(line => line.ToLower().Split(new char[] {' ', ',', '.', '-', '!', '?', ';'}));
+                .SelectMany(line => line.ToLower().Split(new char[] {' ', ',', '.', '-', '!', '?', ';','"','\'','_',':',';'}));
                 // Project the words into a single enumerable
         }
 
 
         // Map() returns the key which the word fits
-        private static int Map(string word)
+        private static string Map(string word)
         {
-            return word.Length;
+            return word;
         }
 
 
         // Reduce() returns a list of Key/value pairs representing the results
         // An IGrouping<> represents a set of values that have the same key
-        private static IEnumerable<KeyValuePair<int, int>> Reduce(IGrouping<int, string> group)
+        private static IEnumerable<KeyValuePair<string, int>> Reduce(IGrouping<string, string> group)
         {
-            return new KeyValuePair<int, int>[]
+            return new KeyValuePair<string, int>[]
             {
-                new KeyValuePair<int, int>(group.Key, group.Count())
+                new KeyValuePair<string, int>(group.Key, group.Count())
             };
         }
 

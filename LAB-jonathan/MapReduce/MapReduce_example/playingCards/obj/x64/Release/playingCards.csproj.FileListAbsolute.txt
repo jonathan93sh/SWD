@@ -1,0 +1,6 @@
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\bin\x64\Release\playingCards.exe.config
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\bin\x64\Release\playingCards.exe
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\bin\x64\Release\playingCards.pdb
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\obj\x64\Release\playingCards.exe
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\obj\x64\Release\playingCards.pdb
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\obj\x64\Release\playingCards.csprojResolveAssemblyReference.cache

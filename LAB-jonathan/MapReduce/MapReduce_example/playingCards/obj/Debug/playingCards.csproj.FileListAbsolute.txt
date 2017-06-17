@@ -1,0 +1,5 @@
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\bin\Debug\playingCards.exe.config
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\bin\Debug\playingCards.exe
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\bin\Debug\playingCards.pdb
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\obj\Debug\playingCards.exe
+C:\git\SWD\LAB-jonathan\MapReduce\MapReduce_example\playingCards\obj\Debug\playingCards.pdb
