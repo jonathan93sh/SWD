@@ -20,6 +20,7 @@ namespace IceCreamMonitorMVP.Model
 
         public IceCreamMonitor()
         {
+
             stationIds = new SortedSet<string>();
             measurements = DAL.Repository.ReadMeasurements();
             if (measurements == null)

@@ -65,24 +65,35 @@ namespace GameOfLife
             }
         }
 
+
+
         public void RunParLoop()
         {
+            object lockbject = new object();
             while (true)
             {
                 var locationsAlive = 0;
-                Parallel.For(0, _gridSize, row =>
+                Parallel.For(0, _gridSize, () => 0, (row, state, partial) =>
                 {
+                    
                     for (var col = 0; col < _gridSize; col++)
                     {
                         if (ShallLocationBeAlive(row, col))
                         {
-                            ++locationsAlive;
+                            partial++;
                             _newGrid[row, col] = 1;
                         }
                         else
                         {
                             _newGrid[row, col] = 0;
                         }
+                    }
+                    return partial;
+                }, partial =>
+                {
+                    lock(lockbject)
+                    {
+                        locationsAlive += partial;
                     }
                 });
                 Swap(ref _curGrid, ref _newGrid);
@@ -97,9 +108,12 @@ namespace GameOfLife
 
         public void RunParWithBarrier()
         {
+            object lockbject = new object();
             int numTasks = Environment.ProcessorCount;
             var locationsAlive = 0;
             var tasks = new Task[numTasks];
+
+            bool exit = false;
 
             var stepBarrier = new Barrier(numTasks, _ =>
             {
@@ -109,6 +123,10 @@ namespace GameOfLife
                 {
                     _countDown--;
                 }
+                if (locationsAlive <= _locationsAlive_TH) exit = true;
+
+                locationsAlive = 0;
+                
             }
             );
 
@@ -121,15 +139,17 @@ namespace GameOfLife
 
                 tasks[i] = Task.Run(() =>
                     {
+
                         while (true)
                         {
+                            var tmpAlive = 0;
                             for (var row = rowStart; row < rowEnd; row++)
                             {
                                 for (var col = 0; col < _gridSize; col++)
                                 {
                                     if (ShallLocationBeAlive(row, col))
                                     {
-                                        ++locationsAlive;
+                                        ++tmpAlive;
                                         _newGrid[row, col] = 1;
                                     }
                                     else
@@ -138,12 +158,17 @@ namespace GameOfLife
                                     }
                                 }
                             }
+                            lock(lockbject)
+                            {
+                                locationsAlive += tmpAlive;
+                            }
                             stepBarrier.SignalAndWait();
-                            if (locationsAlive <= _locationsAlive_TH) break;
+                            if (exit) break;
                             if (_countDown != -1)
                             {
                                 if (_countDown == 0) break;
                             }
+
                         }
                     });
 
